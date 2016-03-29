@@ -225,8 +225,16 @@ b {
 		padding: 30px 0;
 		nav {
 			padding-top: 20px;
-			line-height: 1.5;
-			color: #a4acb0;
+			a {
+				line-height: 1.5;
+				text-decoration: none;
+				&:link, &:visited {
+					color: #a4acb0;
+				}
+				&:hover, &:active {
+					color: lighten(#a4acb0, 20%);
+				}
+			}
 		}
 		h3 {
 			font: inherit;

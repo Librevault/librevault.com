@@ -475,39 +475,50 @@ b {
 /* line 226, ../sass/styles.scss */
 .footer .column nav {
   padding-top: 20px;
+}
+/* line 228, ../sass/styles.scss */
+.footer .column nav a {
   line-height: 1.5;
-  color: #a4acb0;
+  text-decoration: none;
 }
 /* line 231, ../sass/styles.scss */
+.footer .column nav a:link, .footer .column nav a:visited {
+  color: #a4acb0;
+}
+/* line 234, ../sass/styles.scss */
+.footer .column nav a:hover, .footer .column nav a:active {
+  color: #dbdedf;
+}
+/* line 239, ../sass/styles.scss */
 .footer .column h3 {
   font: inherit;
   font-size: 14pt;
   font-weight: 600;
 }
-/* line 239, ../sass/styles.scss */
+/* line 247, ../sass/styles.scss */
 .footer .column:last-child {
   width: auto;
 }
-/* line 242, ../sass/styles.scss */
+/* line 250, ../sass/styles.scss */
 .footer .subscribe-form {
   display: block;
   padding: 20px 0;
   height: 40px;
   font: inherit;
 }
-/* line 247, ../sass/styles.scss */
+/* line 255, ../sass/styles.scss */
 .footer .subscribe-form input {
   box-sizing: border-box;
   height: 100%;
   border: 1px;
   font: inherit;
 }
-/* line 253, ../sass/styles.scss */
+/* line 261, ../sass/styles.scss */
 .footer .subscribe-form input[type=email] {
   padding: 5px 0 5px 12px;
   border-radius: 5px 0 0 5px;
 }
-/* line 257, ../sass/styles.scss */
+/* line 265, ../sass/styles.scss */
 .footer .subscribe-form input[type=submit] {
   border-radius: 0 5px 5px 0;
   padding: 0 12px;
@@ -525,31 +536,31 @@ b {
   transition-duration: 0s;
   background: #075c89;
 }
-/* line 263, ../sass/styles.scss */
+/* line 271, ../sass/styles.scss */
 .footer .social {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-/* line 267, ../sass/styles.scss */
+/* line 275, ../sass/styles.scss */
 .footer .social img {
   height: 32px;
   width: 32px;
   margin: 0 auto;
 }
 
-/* line 278, ../sass/styles.scss */
+/* line 286, ../sass/styles.scss */
 .copyright-footer {
   padding: 12px;
   font-family: Lato, arial, helvetica, sans-serif;
   color: #a4acb0;
   background: #021925;
 }
-/* line 279, ../sass/styles.scss */
+/* line 287, ../sass/styles.scss */
 .copyright-footer .wrapper {
   justify-content: space-between;
 }
-/* line 286, ../sass/styles.scss */
+/* line 294, ../sass/styles.scss */
 .copyright-footer a:link, .copyright-footer a:visited, .copyright-footer a:hover, .copyright-footer a:active {
   color: #a4acb0;
 }
