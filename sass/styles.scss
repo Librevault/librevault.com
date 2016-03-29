@@ -31,7 +31,7 @@ b {
 	display: inline-block;
 
 	color: white;
-	background-color: $btn-color;
+	background: $btn-color;
 	transition-duration: .3s;
 	&:hover {
 		background: darken($btn-color, 5%);
@@ -40,6 +40,7 @@ b {
 		transition-duration: 0s;
 		background: darken($btn-color, 10%);
 	}
+	text-decoration: none;
 }
 
 .button {
@@ -186,6 +187,10 @@ b {
 .section-image {
 	display: inline-block;
 	width: 50%;
+	img {
+		margin: 0 auto;
+		display: block;
+	}
 }
 
 .section-description {
@@ -214,6 +219,28 @@ b {
 .sec2 {
 	background: $bg-light-color;
 	height: 270px;
+}
+
+/* "Try Librevault" stripe */
+.try-stripe {
+	background: lighten($bg-dark-color, 10%);
+	padding: 15px 0;
+	color: white;
+	font-size: 14pt;
+	font-family: Lato, arial, helvetica, sans-serif;
+	.sentence {
+		margin: 0 auto;
+	}
+	.button {
+		@include btn-like(gold);
+
+		padding: 10px 20px;
+		font-family: inherit;
+		font-size: 16px;
+		color: black;
+		border-radius: $input-radius;
+		margin: 0 5px;
+	}
 }
 
 /* Footer */
