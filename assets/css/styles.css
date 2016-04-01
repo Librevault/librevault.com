@@ -379,7 +379,7 @@ b {
   display: block;
   height: 218px;
   width: 700px;
-  background-image: url("//assets.librevault.com/img/librevault-app.svg");
+  background-image: url("/assets/img/librevault-app.svg");
 }
 
 /* Features */
