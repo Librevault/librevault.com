@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title> - Librevault Blog</title>
+	<title>Librevault Basic threat model - Librevault Blog</title>
 
 	<!-- Favicons -->
 	<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
@@ -58,63 +58,69 @@
 		</nav>
 	</div>
 </header>
-<section class="main">
-	<h1 class="slogan">File synchronization designed with privacy in&nbsp;mind</h1>
-	<div class="description">Open source zero-knowledge peer-2-peer file sync.</div>
-	<a href="#" class="button">Download alpha version</a>
-	<div class="app"></div>
-</section>
-<section class="features">
+<section class="blog-post">
 	<div class="wrapper">
-		<div class="feature-col">
-			<img src="/img/Code.png" alt="Open Source">
-			<h3>Open Source</h3>
-			<p class="feature-desc">Librevault is developed by the&nbsp;open&nbsp;source community.</p>
-			<a href="https://bitbucket.org/librevault/" class="feature-link">Dive into the source code!</a>
-		</div>
-		<div class="feature-col">
-			<img src="/img/Password%20Filled.png" alt="Secure">
-			<h3>Secure</h3>
-			<p class="feature-desc">Librevault encrypts all data with AES-256 and uses TLS for all transmissions.</p>
-			<a href="#" class="feature-link">Read more about security!</a>
-		</div>
-		<div class="feature-col">
-			<img src="/img/Module%20Filled.png" alt="Flexible">
-			<h3>Flexible</h3>
-			<p class="feature-desc">Synchronize between your devices, even without the&nbsp;Internet connection &mdash; over the&nbsp;local network.</p>
-			<a href="#" class="feature-link">Learn more about the features!</a>
-		</div>
-	</div>
-</section>
-<section class="sec1">
-	<div class="wrapper">
-		<div class="section-image">
-			<img src="/img/swarm.svg" alt="Decentralized and Peer-to-Peer">
-		</div>
-		<div class="section-description">
-			<h3>Decentralized and Peer-to-peer</h3>
-			<p>Librevault transfers data directly from one device to another. You can use it in your local network, and it will work even without
-				Internet access.</p>
-		</div>
-	</div>
-</section>
-<section class="sec2">
-	<div class="wrapper">
-		<div class="section-description">
-			<h3>Secure and private</h3>
-			<p>All the data is encrypted <b>client-side</b> using industrial-grade AES-256 algorithm, preventing hackers from ever being able to decrypt your data.</p>
-			<p>All communication is secured using TLSv1.2.</p>
-		</div>
-		<div class="section-image">
-			<img src="/img/ssl.svg" alt="Secure and private">
-		</div>
-	</div>
-</section>
-<section class="try-stripe">
-	<div class="wrapper">
-		<div class="sentence">
-			Librevault is in its early stage now, but you can <a href="#" class="button">Download alpha version</a>
-		</div>
+		<article class="opened-post">
+			<a href="/" class="back-link">&larr; Back to overview</a>
+			<h1 class="post-title">Librevault Basic threat model</h1>
+			<div class="date">January 10, 2016</div>
+			<div class="content">
+				<p>In this article we will describe what threats your data exposed to in classic cloud storage services and describe the way Librevault guards against them.<br />
+<!-- more --></p>
+
+<h2 id="threat-1-compromised-user">Threat 1: Compromised User</h2>
+<p>Remember: You should never consider any computer system to be invulnerable. Your computer is vulnerable too, for example, it can contain malware or <a href="https://en.wikipedia.org/wiki/Hardware_Trojan">hardware Trojan</a>.
+Unfortunately, we can’t protect you from this threat. But we can give you advice:<br />
+1) Use hardened Operating System. Linux, for example.<br />
+2) Use antivirus software. It will not provide you perfect protection, but it will decrease probability of being infected by malware.<br />
+3) Always update your software! Do not disable software auto-update, or the attacker will be able to get your data one day.</p>
+
+<h2 id="threat-2-compromised-network">Threat 2: Compromised network</h2>
+<p><a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack">Man-in-the-Middle</a> attack is an attack, where the attacker secretly relays and possibly alters the communication between you and other Librevault nodes. Such attack can be performed in classic systems, where SSL is being used, but it is very difficult, so it can be performed only by very huge and powerful organization, such as governmental agency.</p>
+
+<p>Such attack is nearly impossible in Librevault, because we use cryptographic systems where you don’t need to trust any third parties, such as <a href="https://en.wikipedia.org/wiki/Certificate_authority">Certificate Authorities (CA)</a> and they can not issue forged SSL certificate.</p>
+
+<h2 id="threat-3-librevault-backdoor">Threat 3: Librevault backdoor</h2>
+<p>Every computer system is vulnerable. That’s a law of nature. Do you remember <a href="https://en.wikipedia.org/wiki/2014_celebrity_photo_hack">iCloud leak in 2014</a>? And what about Dropbox incident, when any file in any account was available without a password?</p>
+
+<p>It is completely impossible in Librevault! Files on the servers are always encrypted client-side, and the encryption key is located on your computer and only you can decrypt your data. And even if the attacker compromises our servers (and that’s unlikely), it will get only a sequence of random bytes.<br />
+Also, we are completely honest to you: Librevault client software is completely open-source! You can study its code, review, and improve it (so, it is really a win-win situation for you and us)!</p>
+
+			</div>
+			<div class="share">
+				Share This!
+				<script type="text/javascript" src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="//yastatic.net/share2/share.js" charset="utf-8"></script>
+<div class="ya-share2" data-lang="en" data-services="twitter,facebook,vkontakte,gplus,linkedin,reddit" data-counter=""></div>
+			</div>
+			
+			<section>
+				<h1>Comments</h1>
+				
+
+<script type="text/javascript">
+      var disqus_shortname = 'librevault';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = '/blog/librevault-basic-threat-model';
+        var disqus_url = 'https://librevault.com/blog/librevault-basic-threat-model/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+				<div id="disqus_thread" aria-live="polite">
+					<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+				</div>
+			</section>
+			
+		</article>
 	</div>
 </section>
 <footer class="footer">

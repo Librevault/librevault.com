@@ -1,0 +1,804 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic,400italic);
+/* line 5, ../../../../../usr/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../usr/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../usr/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../usr/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../usr/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../usr/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../usr/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../usr/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../usr/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* Webfont: Lato-Hairline */
+@font-face {
+  font-family: 'Lato';
+  src: url("/assets/fonts/Lato-Hairline.eot");
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/Lato-Hairline.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Lato-Hairline.woff2") format("woff2"), url("/assets/fonts/Lato-Hairline.woff") format("woff"), url("/assets/fonts/Lato-Hairline.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: Lato-HairlineItalic */
+@font-face {
+  font-family: 'Lato';
+  src: url("/assets/fonts/Lato-HairlineItalic.eot");
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/Lato-HairlineItalic.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Lato-HairlineItalic.woff2") format("woff2"), url("/assets/fonts/Lato-HairlineItalic.woff") format("woff"), url("/assets/fonts/Lato-HairlineItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 100;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: Lato-Thin */
+@font-face {
+  font-family: 'Lato';
+  src: url("/assets/fonts/Lato-Thin.eot");
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/Lato-Thin.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Lato-Thin.woff2") format("woff2"), url("/assets/fonts/Lato-Thin.woff") format("woff"), url("/assets/fonts/Lato-Thin.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 200;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: Lato-ThinItalic */
+@font-face {
+  font-family: 'Lato';
+  src: url("/assets/fonts/Lato-ThinItalic.eot");
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/Lato-ThinItalic.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Lato-ThinItalic.woff2") format("woff2"), url("/assets/fonts/Lato-ThinItalic.woff") format("woff"), url("/assets/fonts/Lato-ThinItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 200;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: Lato-Light */
+@font-face {
+  font-family: 'Lato';
+  src: url("/assets/fonts/Lato-Light.eot");
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/Lato-Light.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Lato-Light.woff2") format("woff2"), url("/assets/fonts/Lato-Light.woff") format("woff"), url("/assets/fonts/Lato-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: Lato-LightItalic */
+@font-face {
+  font-family: 'Lato';
+  src: url("/assets/fonts/Lato-LightItalic.eot");
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/Lato-LightItalic.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Lato-LightItalic.woff2") format("woff2"), url("/assets/fonts/Lato-LightItalic.woff") format("woff"), url("/assets/fonts/Lato-LightItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: Lato-Regular */
+@font-face {
+  font-family: 'Lato';
+  src: url("/assets/fonts/Lato-Regular.eot");
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Lato-Regular.woff2") format("woff2"), url("/assets/fonts/Lato-Regular.woff") format("woff"), url("/assets/fonts/Lato-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: Lato-Italic */
+@font-face {
+  font-family: 'Lato';
+  src: url("/assets/fonts/Lato-Italic.eot");
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/Lato-Italic.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Lato-Italic.woff2") format("woff2"), url("/assets/fonts/Lato-Italic.woff") format("woff"), url("/assets/fonts/Lato-Italic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: Lato-Medium */
+@font-face {
+  font-family: 'Lato';
+  src: url("/assets/fonts/Lato-Medium.eot");
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/Lato-Medium.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Lato-Medium.woff2") format("woff2"), url("/assets/fonts/Lato-Medium.woff") format("woff"), url("/assets/fonts/Lato-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: Lato-MediumItalic */
+@font-face {
+  font-family: 'Lato';
+  src: url("/assets/fonts/Lato-MediumItalic.eot");
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/Lato-MediumItalic.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Lato-MediumItalic.woff2") format("woff2"), url("/assets/fonts/Lato-MediumItalic.woff") format("woff"), url("/assets/fonts/Lato-MediumItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 500;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: Lato-Semibold */
+@font-face {
+  font-family: 'Lato';
+  src: url("/assets/fonts/Lato-Semibold.eot");
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/Lato-Semibold.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Lato-Semibold.woff2") format("woff2"), url("/assets/fonts/Lato-Semibold.woff") format("woff"), url("/assets/fonts/Lato-Semibold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: Lato-SemiboldItalic */
+@font-face {
+  font-family: 'Lato';
+  src: url("/assets/fonts/Lato-SemiboldItalic.eot");
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/Lato-SemiboldItalic.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Lato-SemiboldItalic.woff2") format("woff2"), url("/assets/fonts/Lato-SemiboldItalic.woff") format("woff"), url("/assets/fonts/Lato-SemiboldItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 600;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: Lato-Bold */
+@font-face {
+  font-family: 'Lato';
+  src: url("/assets/fonts/Lato-Bold.eot");
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/Lato-Bold.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Lato-Bold.woff2") format("woff2"), url("/assets/fonts/Lato-Bold.woff") format("woff"), url("/assets/fonts/Lato-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: Lato-BoldItalic */
+@font-face {
+  font-family: 'Lato';
+  src: url("/assets/fonts/Lato-BoldItalic.eot");
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/Lato-BoldItalic.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Lato-BoldItalic.woff2") format("woff2"), url("/assets/fonts/Lato-BoldItalic.woff") format("woff"), url("/assets/fonts/Lato-BoldItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: Lato-Heavy */
+@font-face {
+  font-family: 'Lato';
+  src: url("/assets/fonts/Lato-Heavy.eot");
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/Lato-Heavy.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Lato-Heavy.woff2") format("woff2"), url("/assets/fonts/Lato-Heavy.woff") format("woff"), url("/assets/fonts/Lato-Heavy.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 800;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: Lato-HeavyItalic */
+@font-face {
+  font-family: 'Lato';
+  src: url("/assets/fonts/Lato-HeavyItalic.eot");
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/Lato-HeavyItalic.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Lato-HeavyItalic.woff2") format("woff2"), url("/assets/fonts/Lato-HeavyItalic.woff") format("woff"), url("/assets/fonts/Lato-HeavyItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 800;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: Lato-Black */
+@font-face {
+  font-family: 'Lato';
+  src: url("/assets/fonts/Lato-Black.eot");
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/Lato-Black.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Lato-Black.woff2") format("woff2"), url("/assets/fonts/Lato-Black.woff") format("woff"), url("/assets/fonts/Lato-Black.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 900;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: Lato-BlackItalic */
+@font-face {
+  font-family: 'Lato';
+  src: url("/assets/fonts/Lato-BlackItalic.eot");
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/Lato-BlackItalic.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Lato-BlackItalic.woff2") format("woff2"), url("/assets/fonts/Lato-BlackItalic.woff") format("woff"), url("/assets/fonts/Lato-BlackItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 900;
+  text-rendering: optimizeLegibility;
+}
+/* line 26, ../../../source/_compass/styles.scss */
+body {
+  font-family: 'Open Sans', arial, helvetica, sans-serif;
+  background: #021925;
+  color: #444;
+}
+
+/* line 32, ../../../source/_compass/styles.scss */
+b {
+  font-weight: 700;
+}
+
+/* line 57, ../../../source/_compass/styles.scss */
+.button {
+  display: inline-block;
+  color: white;
+  background: #097cba;
+  transition-duration: .3s;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-family: Lato, arial, helvetica, sans-serif;
+  border-radius: 5px;
+}
+/* line 42, ../../../source/_compass/styles.scss */
+.button:hover {
+  background: #086ca2;
+}
+/* line 45, ../../../source/_compass/styles.scss */
+.button:active {
+  transition-duration: 0s;
+  background: #075c89;
+}
+
+/* line 65, ../../../source/_compass/styles.scss */
+.wrapper {
+  display: flex;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 8px;
+  height: 100%;
+}
+
+/* Header */
+/* line 2, ../../../source/_compass/_header.scss */
+.header {
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+/* line 11, ../../../source/_compass/_header.scss */
+.header .header-wrap .logo {
+  display: inline-block;
+  min-width: 237px;
+  height: 100%;
+}
+/* line 15, ../../../source/_compass/_header.scss */
+.header .header-wrap .logo img {
+  padding-top: 8px;
+  width: 237px;
+  height: 55px;
+}
+/* line 22, ../../../source/_compass/_header.scss */
+.header .header-wrap .header-nav {
+  margin-left: 50px;
+  align-items: center;
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-between;
+  vertical-align: inherit;
+}
+/* line 29, ../../../source/_compass/_header.scss */
+.header .header-wrap .header-nav ul {
+  display: inline;
+}
+/* line 31, ../../../source/_compass/_header.scss */
+.header .header-wrap .header-nav ul li {
+  display: inline-block;
+  font-family: Lato, arial, helvetica, sans-serif;
+  font-size: 12.7pt;
+  margin-right: 28px;
+}
+/* line 36, ../../../source/_compass/_header.scss */
+.header .header-wrap .header-nav ul li a {
+  text-decoration: none;
+  color: #444;
+  transition-duration: .3s;
+}
+/* line 40, ../../../source/_compass/_header.scss */
+.header .header-wrap .header-nav ul li a:hover {
+  color: #1597dd;
+}
+/* line 47, ../../../source/_compass/_header.scss */
+.header .header-wrap .header-nav .button {
+  vertical-align: inherit;
+}
+
+/* Main */
+/* line 2, ../../../source/_compass/_landing.scss */
+.main {
+  margin-top: 80px;
+  background: radial-gradient(#50b7ee, #097cba);
+  height: 500px;
+  color: white;
+  text-align: center;
+}
+/* line 10, ../../../source/_compass/_landing.scss */
+.main .slogan {
+  width: 100%;
+  display: inline-block;
+  font-family: 'Lato', arial, helvetica, sans-serif;
+  margin-top: 85px;
+  font-size: 21pt;
+  font-weight: 500;
+}
+/* line 18, ../../../source/_compass/_landing.scss */
+.main .description {
+  margin-top: 40px;
+  font-family: 'Open Sans', arial, helvetica, sans-serif;
+  font-size: 13pt;
+}
+/* line 24, ../../../source/_compass/_landing.scss */
+.main .button {
+  margin: 45px;
+}
+/* line 27, ../../../source/_compass/_landing.scss */
+.main .app {
+  margin: 0 auto;
+  display: block;
+  height: 218px;
+  width: 700px;
+  background-image: url("//assets.librevault.com/img/librevault-app.svg");
+}
+
+/* Features */
+/* line 37, ../../../source/_compass/_landing.scss */
+.features {
+  background: #fff;
+  height: 270px;
+  box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.1);
+}
+/* line 41, ../../../source/_compass/_landing.scss */
+.features .feature-col {
+  color: #444;
+  line-height: 1.5;
+  font-family: 'Open Sans', arial, helvetica, sans-serif;
+  width: 33%;
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+/* line 42, ../../../source/_compass/_landing.scss */
+.features .feature-col img {
+  height: 48px;
+  width: 48px;
+}
+/* line 46, ../../../source/_compass/_landing.scss */
+.features .feature-col h3 {
+  display: block;
+  font-family: 'Lato', arial, helvetica, sans-serif;
+  font-size: 13pt;
+  padding: 10px 0 15px 0;
+}
+/* line 52, ../../../source/_compass/_landing.scss */
+.features .feature-col .feature-link {
+  line-height: 2;
+  color: #1597dd;
+  text-decoration: none;
+}
+/* line 57, ../../../source/_compass/_landing.scss */
+.features .feature-col .feature-link:hover {
+  color: #097cba;
+}
+
+/* Sections */
+/* line 72, ../../../source/_compass/_landing.scss */
+.section-image {
+  display: inline-block;
+  width: 50%;
+}
+/* line 75, ../../../source/_compass/_landing.scss */
+.section-image img {
+  margin: 0 auto;
+  display: block;
+}
+
+/* line 81, ../../../source/_compass/_landing.scss */
+.section-description {
+  display: inline-block;
+  width: 50%;
+  font-family: 'Open Sans', arial, helvetica, sans-serif;
+  font-size: 12pt;
+  color: #444;
+  line-height: 1.5;
+}
+/* line 82, ../../../source/_compass/_landing.scss */
+.section-description p {
+  padding-bottom: 0.7em;
+}
+/* line 87, ../../../source/_compass/_landing.scss */
+.section-description h3 {
+  font-family: Lato, arial, helvetica, sans-serif;
+  font-size: 19pt;
+  margin: 0 0 24px 0;
+}
+
+/* line 98, ../../../source/_compass/_landing.scss */
+.sec1 {
+  background: #fff;
+  height: 270px;
+  box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* line 104, ../../../source/_compass/_landing.scss */
+.sec2 {
+  background: #f1f3f5;
+  height: 270px;
+}
+
+/* "Try Librevault" stripe */
+/* line 110, ../../../source/_compass/_landing.scss */
+.try-stripe {
+  background: #075c89;
+  padding: 15px 0;
+  color: white;
+  font-size: 14pt;
+  font-family: Lato, arial, helvetica, sans-serif;
+}
+/* line 116, ../../../source/_compass/_landing.scss */
+.try-stripe .sentence {
+  margin: 0 auto;
+}
+/* line 119, ../../../source/_compass/_landing.scss */
+.try-stripe .button {
+  display: inline-block;
+  color: white;
+  background: gold;
+  transition-duration: .3s;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-family: inherit;
+  font-size: 16px;
+  color: black;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+/* line 42, ../../../source/_compass/styles.scss */
+.try-stripe .button:hover {
+  background: #e6c200;
+}
+/* line 45, ../../../source/_compass/styles.scss */
+.try-stripe .button:active {
+  transition-duration: 0s;
+  background: #ccac00;
+}
+
+/* line 1, ../../../source/_compass/_blog.scss */
+.blog-index, .blog-post {
+  margin-top: 80px;
+  background: #f1f3f5;
+}
+/* line 7, ../../../source/_compass/_blog.scss */
+.blog-index .wrapper, .blog-post .wrapper {
+  flex-flow: column wrap;
+}
+
+/* Posts index */
+/* line 2, ../../../source/_compass/_blog-index.scss */
+.pagination {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 50px 0;
+  font-size: 14px;
+}
+/* line 8, ../../../source/_compass/_blog-index.scss */
+.pagination-top {
+  margin-bottom: 10px;
+}
+/* line 11, ../../../source/_compass/_blog-index.scss */
+.pagination-bottom {
+  margin-top: 10px;
+}
+/* line 14, ../../../source/_compass/_blog-index.scss */
+.pagination a {
+  background-color: white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 1em;
+}
+
+/* line 20, ../../../source/_compass/_blog-index.scss */
+.posts {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 14px;
+}
+
+/* line 29, ../../../source/_compass/_blog-index.scss */
+.post {
+  display: inline-flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 20px;
+  width: calc((100% / 3) - (20px * 2));
+  padding: 15px;
+  box-sizing: border-box;
+  min-height: 320px;
+}
+/* line 40, ../../../source/_compass/_blog-index.scss */
+.post .post-image {
+  background: #f1f3f5 url("/img/librevault-blog-mono.svg") center center no-repeat;
+  max-width: 100%;
+  min-height: 150px;
+  border: 1px solid gray;
+  order: -2;
+}
+/* line 45, ../../../source/_compass/_blog-index.scss */
+.post .post-image img {
+  max-width: 100%;
+}
+/* line 50, ../../../source/_compass/_blog-index.scss */
+.post .post-title {
+  order: -1;
+  font-size: 30px;
+  padding-top: 1em;
+}
+/* line 54, ../../../source/_compass/_blog-index.scss */
+.post .post-title a, .post .post-title a:link {
+  text-decoration: none;
+  color: #444;
+}
+/* line 59, ../../../source/_compass/_blog-index.scss */
+.post .post-date {
+  margin-top: 5px;
+  font-style: italic;
+}
+/* line 63, ../../../source/_compass/_blog-index.scss */
+.post .post-entry {
+  margin: 15px 0;
+  line-height: 24px;
+}
+/* line 67, ../../../source/_compass/_blog-index.scss */
+.post .read-more {
+  width: 100%;
+  margin-top: auto;
+  font-family: 'Lato', arial, helvetica, sans-serif;
+  text-decoration: none;
+  font-size: 12pt;
+}
+/* line 72, ../../../source/_compass/_blog-index.scss */
+.post .read-more:link {
+  color: #1597dd;
+  transition: 0s;
+}
+/* line 76, ../../../source/_compass/_blog-index.scss */
+.post .read-more:hover, .post .read-more:active {
+  color: #1177ae;
+  transition: .3s;
+}
+/* line 80, ../../../source/_compass/_blog-index.scss */
+.post .read-more:visited {
+  color: #50b7ee;
+}
+
+/* Opened post */
+/* line 2, ../../../source/_compass/_blog-post.scss */
+.opened-post {
+  padding: 30px;
+  background: white;
+}
+/* line 5, ../../../source/_compass/_blog-post.scss */
+.opened-post .back-link {
+  font-family: 'Lato', arial, helvetica, sans-serif;
+  text-decoration: none;
+}
+/* line 8, ../../../source/_compass/_blog-post.scss */
+.opened-post .back-link:link, .opened-post .back-link:visited {
+  color: #1597dd;
+  transition: 0s;
+}
+/* line 12, ../../../source/_compass/_blog-post.scss */
+.opened-post .back-link:hover, .opened-post .back-link:active {
+  color: #1177ae;
+  transition: .3s;
+}
+/* line 17, ../../../source/_compass/_blog-post.scss */
+.opened-post h1 {
+  margin-top: 10px;
+  font-size: 32pt;
+  line-height: 1.7;
+  color: #1597dd;
+  font-family: 'Lato', arial, helvetica, sans-serif;
+}
+/* line 24, ../../../source/_compass/_blog-post.scss */
+.opened-post .date {
+  line-height: 1.7;
+  font-weight: bold;
+  font-style: italic;
+}
+/* line 29, ../../../source/_compass/_blog-post.scss */
+.opened-post h2 {
+  font-size: 22pt;
+  line-height: 1.2;
+  padding-top: 1.3em;
+}
+/* line 34, ../../../source/_compass/_blog-post.scss */
+.opened-post h3 {
+  font-size: 17pt;
+  line-height: 1.2;
+  padding-top: 0.5em;
+}
+/* line 39, ../../../source/_compass/_blog-post.scss */
+.opened-post .content {
+  font-size: 13pt;
+  margin-top: 40px;
+  line-height: 1.7;
+}
+/* line 44, ../../../source/_compass/_blog-post.scss */
+.opened-post .share {
+  display: flex;
+  margin-top: 30px;
+  font-size: 18pt;
+}
+/* line 48, ../../../source/_compass/_blog-post.scss */
+.opened-post .share .ya-share2 {
+  margin-left: 16px;
+  display: inline-block;
+}
+/* line 54, ../../../source/_compass/_blog-post.scss */
+.opened-post a:link {
+  color: #1597dd;
+  transition: 0s;
+}
+/* line 58, ../../../source/_compass/_blog-post.scss */
+.opened-post a:hover, .opened-post a:active {
+  color: #1177ae;
+  transition: .3s;
+}
+
+/* Footer */
+/* line 2, ../../../source/_compass/_footer.scss */
+.footer {
+  font-family: Lato, arial, helvetica, sans-serif;
+  color: #fff;
+  background: #043b59;
+}
+/* line 3, ../../../source/_compass/_footer.scss */
+.footer .wrapper {
+  align-items: stretch;
+}
+/* line 6, ../../../source/_compass/_footer.scss */
+.footer .column {
+  padding: 30px 0;
+  display: inline-block;
+  width: 50%;
+}
+/* line 8, ../../../source/_compass/_footer.scss */
+.footer .column nav {
+  padding-top: 20px;
+}
+/* line 10, ../../../source/_compass/_footer.scss */
+.footer .column nav a {
+  line-height: 1.5;
+  text-decoration: none;
+}
+/* line 13, ../../../source/_compass/_footer.scss */
+.footer .column nav a:link, .footer .column nav a:visited {
+  color: #a4acb0;
+}
+/* line 16, ../../../source/_compass/_footer.scss */
+.footer .column nav a:hover, .footer .column nav a:active {
+  color: #dbdedf;
+}
+/* line 21, ../../../source/_compass/_footer.scss */
+.footer .column h3 {
+  font: inherit;
+  font-size: 14pt;
+  font-weight: 600;
+}
+/* line 29, ../../../source/_compass/_footer.scss */
+.footer .column:last-child {
+  width: auto;
+}
+/* line 32, ../../../source/_compass/_footer.scss */
+.footer .subscribe-form {
+  display: block;
+  padding: 20px 0;
+  height: 40px;
+  font: inherit;
+}
+/* line 37, ../../../source/_compass/_footer.scss */
+.footer .subscribe-form input {
+  box-sizing: border-box;
+  height: 100%;
+  border: 1px;
+  font: inherit;
+}
+/* line 43, ../../../source/_compass/_footer.scss */
+.footer .subscribe-form input[type=email] {
+  padding: 5px 0 5px 12px;
+  border-radius: 5px 0 0 5px;
+}
+/* line 47, ../../../source/_compass/_footer.scss */
+.footer .subscribe-form input[type=submit] {
+  border-radius: 0 5px 5px 0;
+  padding: 0 12px;
+  display: inline-block;
+  color: white;
+  background: #097cba;
+  transition-duration: .3s;
+  text-decoration: none;
+}
+/* line 42, ../../../source/_compass/styles.scss */
+.footer .subscribe-form input[type=submit]:hover {
+  background: #086ca2;
+}
+/* line 45, ../../../source/_compass/styles.scss */
+.footer .subscribe-form input[type=submit]:active {
+  transition-duration: 0s;
+  background: #075c89;
+}
+/* line 53, ../../../source/_compass/_footer.scss */
+.footer .social {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+/* line 57, ../../../source/_compass/_footer.scss */
+.footer .social img {
+  height: 32px;
+  width: 32px;
+  margin: 0 auto;
+}
+
+/* line 68, ../../../source/_compass/_footer.scss */
+.copyright-footer {
+  padding: 12px;
+  font-family: Lato, arial, helvetica, sans-serif;
+  color: #a4acb0;
+  background: #021925;
+}
+/* line 69, ../../../source/_compass/_footer.scss */
+.copyright-footer .wrapper {
+  justify-content: space-between;
+}
+/* line 76, ../../../source/_compass/_footer.scss */
+.copyright-footer a:link, .copyright-footer a:visited, .copyright-footer a:hover, .copyright-footer a:active {
+  color: #a4acb0;
+}
