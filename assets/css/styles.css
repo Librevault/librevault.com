@@ -563,7 +563,7 @@ b {
 }
 /* line 40, ../../../source/_compass/_blog-index.scss */
 .post .post-image {
-  background: #f1f3f5 url("/img/librevault-blog-mono.svg") center center no-repeat;
+  background: #f1f3f5 url("/assets/img/librevault-blog-mono.svg") center center no-repeat;
   max-width: 100%;
   min-height: 150px;
   border: 1px solid gray;
