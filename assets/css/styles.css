@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic,400italic);
 /* line 5, ../../../../../usr/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
@@ -671,22 +672,32 @@ b {
   line-height: 1.7;
 }
 /* line 44, ../../../source/_compass/_blog-post.scss */
+.opened-post .content ul {
+  padding: 10px 0;
+}
+/* line 47, ../../../source/_compass/_blog-post.scss */
+.opened-post .content ul li:before {
+  color: #1597dd;
+  content: "• ";
+  padding-right: 10px;
+}
+/* line 55, ../../../source/_compass/_blog-post.scss */
 .opened-post .share {
   display: flex;
   margin-top: 30px;
   font-size: 18pt;
 }
-/* line 48, ../../../source/_compass/_blog-post.scss */
+/* line 59, ../../../source/_compass/_blog-post.scss */
 .opened-post .share .ya-share2 {
   margin-left: 16px;
   display: inline-block;
 }
-/* line 54, ../../../source/_compass/_blog-post.scss */
+/* line 65, ../../../source/_compass/_blog-post.scss */
 .opened-post a:link {
   color: #1597dd;
   transition: 0s;
 }
-/* line 58, ../../../source/_compass/_blog-post.scss */
+/* line 69, ../../../source/_compass/_blog-post.scss */
 .opened-post a:hover, .opened-post a:active {
   color: #1177ae;
   transition: .3s;
