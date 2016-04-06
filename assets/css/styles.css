@@ -619,27 +619,27 @@ b {
 }
 
 /* Opened post */
-/* line 2, ../../../source/_compass/_blog-post.scss */
+/* line 4, ../../../source/_compass/_blog-post.scss */
 .opened-post {
   padding: 30px;
   background: white;
 }
-/* line 5, ../../../source/_compass/_blog-post.scss */
+/* line 7, ../../../source/_compass/_blog-post.scss */
 .opened-post .back-link {
   font-family: 'Lato', arial, helvetica, sans-serif;
   text-decoration: none;
 }
-/* line 8, ../../../source/_compass/_blog-post.scss */
+/* line 10, ../../../source/_compass/_blog-post.scss */
 .opened-post .back-link:link, .opened-post .back-link:visited {
   color: #1597dd;
   transition: 0s;
 }
-/* line 12, ../../../source/_compass/_blog-post.scss */
+/* line 14, ../../../source/_compass/_blog-post.scss */
 .opened-post .back-link:hover, .opened-post .back-link:active {
   color: #1177ae;
   transition: .3s;
 }
-/* line 17, ../../../source/_compass/_blog-post.scss */
+/* line 19, ../../../source/_compass/_blog-post.scss */
 .opened-post h1 {
   margin-top: 10px;
   font-size: 32pt;
@@ -647,57 +647,57 @@ b {
   color: #1597dd;
   font-family: 'Lato', arial, helvetica, sans-serif;
 }
-/* line 24, ../../../source/_compass/_blog-post.scss */
+/* line 26, ../../../source/_compass/_blog-post.scss */
 .opened-post .date {
   line-height: 1.7;
   font-weight: bold;
   font-style: italic;
 }
-/* line 29, ../../../source/_compass/_blog-post.scss */
+/* line 31, ../../../source/_compass/_blog-post.scss */
 .opened-post h2 {
   font-size: 22pt;
   line-height: 1.2;
   padding-top: 1.3em;
 }
-/* line 34, ../../../source/_compass/_blog-post.scss */
+/* line 36, ../../../source/_compass/_blog-post.scss */
 .opened-post h3 {
   font-size: 17pt;
   line-height: 1.2;
   padding-top: 0.5em;
 }
-/* line 39, ../../../source/_compass/_blog-post.scss */
+/* line 41, ../../../source/_compass/_blog-post.scss */
 .opened-post .content {
   font-size: 13pt;
   margin-top: 40px;
   line-height: 1.7;
 }
-/* line 44, ../../../source/_compass/_blog-post.scss */
+/* line 46, ../../../source/_compass/_blog-post.scss */
 .opened-post .content ul {
   padding: 10px 0;
 }
-/* line 47, ../../../source/_compass/_blog-post.scss */
+/* line 49, ../../../source/_compass/_blog-post.scss */
 .opened-post .content ul li:before {
   color: #1597dd;
   content: "• ";
   padding-right: 10px;
 }
-/* line 55, ../../../source/_compass/_blog-post.scss */
+/* line 57, ../../../source/_compass/_blog-post.scss */
 .opened-post .share {
   display: flex;
   margin-top: 30px;
   font-size: 18pt;
 }
-/* line 59, ../../../source/_compass/_blog-post.scss */
+/* line 61, ../../../source/_compass/_blog-post.scss */
 .opened-post .share .ya-share2 {
   margin-left: 16px;
   display: inline-block;
 }
-/* line 65, ../../../source/_compass/_blog-post.scss */
-.opened-post a:link {
+/* line 67, ../../../source/_compass/_blog-post.scss */
+.opened-post a:link, .opened-post a:visited {
   color: #1597dd;
   transition: 0s;
 }
-/* line 69, ../../../source/_compass/_blog-post.scss */
+/* line 71, ../../../source/_compass/_blog-post.scss */
 .opened-post a:hover, .opened-post a:active {
   color: #1177ae;
   transition: .3s;
@@ -709,11 +709,12 @@ b {
   margin-top: 80px;
   background: #fff;
 }
-/* line 5, ../../../source/_compass/_download.scss */
-.download .wrapper {
+/* line 6, ../../../source/_compass/_download.scss */
+.download .download-block {
   display: block;
+  padding: 30px 0;
 }
-/* line 8, ../../../source/_compass/_download.scss */
+/* line 10, ../../../source/_compass/_download.scss */
 .download h1 {
   padding: 20px 0 15px 0;
   font-size: 32pt;
@@ -721,36 +722,44 @@ b {
   color: #1597dd;
   font-family: 'Lato', arial, helvetica, sans-serif;
 }
-/* line 15, ../../../source/_compass/_download.scss */
+/* line 17, ../../../source/_compass/_download.scss */
 .download .download-platform {
   display: flex;
   align-items: flex-start;
-  padding-bottom: 50px;
+  padding: 0 0 50px 0;
 }
-/* line 20, ../../../source/_compass/_download.scss */
+/* line 22, ../../../source/_compass/_download.scss */
 .download .osimg {
   width: 66px;
   height: 66px;
 }
-/* line 24, ../../../source/_compass/_download.scss */
+/* line 26, ../../../source/_compass/_download.scss */
 .download .platform-block {
   padding-left: 32px;
 }
-/* line 26, ../../../source/_compass/_download.scss */
+/* line 28, ../../../source/_compass/_download.scss */
 .download .platform-block .osname {
   font-size: 15pt;
 }
-/* line 29, ../../../source/_compass/_download.scss */
+/* line 31, ../../../source/_compass/_download.scss */
 .download .platform-block .oscomment {
-  padding-top: 10px;
+  padding-top: 7px;
   padding-bottom: 13px;
   font-size: 10pt;
+  line-height: 1.5;
 }
-/* line 34, ../../../source/_compass/_download.scss */
+/* line 37, ../../../source/_compass/_download.scss */
 .download .platform-block .download-link {
   text-decoration: none;
   color: #1597dd;
   font-size: 11pt;
+  padding-right: 10px;
+}
+/* line 45, ../../../source/_compass/_download.scss */
+.download #build-yourself h2 {
+  font-size: 20pt;
+  line-height: 1.5;
+  color: #1597dd;
 }
 
 /* Footer */
@@ -799,7 +808,7 @@ b {
 }
 /* line 32, ../../../source/_compass/_footer.scss */
 .footer .subscribe-form {
-  display: block;
+  display: flex;
   padding: 20px 0;
   height: 40px;
   font: inherit;
@@ -808,7 +817,7 @@ b {
 .footer .subscribe-form input {
   box-sizing: border-box;
   height: 100%;
-  border: 1px;
+  border: 0;
   font: inherit;
 }
 /* line 43, ../../../source/_compass/_footer.scss */
