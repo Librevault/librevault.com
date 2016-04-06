@@ -703,6 +703,56 @@ b {
   transition: .3s;
 }
 
+/* Download */
+/* line 2, ../../../source/_compass/_download.scss */
+.download {
+  margin-top: 80px;
+  background: #fff;
+}
+/* line 5, ../../../source/_compass/_download.scss */
+.download .wrapper {
+  display: block;
+}
+/* line 8, ../../../source/_compass/_download.scss */
+.download h1 {
+  padding: 20px 0 15px 0;
+  font-size: 32pt;
+  line-height: 1.7;
+  color: #1597dd;
+  font-family: 'Lato', arial, helvetica, sans-serif;
+}
+/* line 15, ../../../source/_compass/_download.scss */
+.download .download-platform {
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 50px;
+}
+/* line 20, ../../../source/_compass/_download.scss */
+.download .osimg {
+  width: 66px;
+  height: 66px;
+}
+/* line 24, ../../../source/_compass/_download.scss */
+.download .platform-block {
+  padding-left: 32px;
+}
+/* line 26, ../../../source/_compass/_download.scss */
+.download .platform-block .osname {
+  font-size: 15pt;
+}
+/* line 29, ../../../source/_compass/_download.scss */
+.download .platform-block .oscomment {
+  padding-top: 10px;
+  padding-bottom: 13px;
+  font-size: 10pt;
+}
+/* line 34, ../../../source/_compass/_download.scss */
+.download .platform-block .download-link {
+  text-decoration: none;
+  color: #1597dd;
+  font-size: 11pt;
+}
+
 /* Footer */
 /* line 2, ../../../source/_compass/_footer.scss */
 .footer {
