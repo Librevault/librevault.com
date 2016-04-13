@@ -110,7 +110,16 @@ Downloads - Librevault
 </header>
 <section class="download">
 	<div class="wrapper">
-		<section class="download-block">
+		<script type="text/javascript">
+	$(document).ready(function(){
+		$('.spoiler-link').click(function(){
+			$(this).next('.spoiler-content').toggle('normal');
+			return false;
+		});
+	});
+</script>
+
+<section class="download-block">
 	<h1>Download Librevault</h1>
 	<section class="download-platform">
 		<img src="/assets/img/os/Windows8-96.png" class="osimg">
@@ -133,8 +142,11 @@ Downloads - Librevault
 		<div class="platform-block">
 			<h2 class="osname">Ubuntu</h2>
 			<div class="oscomment">Supported versions: 15.10 Wily Werewolf, 16.04 Xenial Xerus</div>
-			<div class="download-step">Type in your terminal:
-				<code>sudo apt-add-repository -uy ppa:librevault/librevault && sudo apt install -y librevault</code>
+			<a href="#" class="download-link spoiler-link">Install from a repository</a>
+			<div class="spoiler-content">
+				<div class="download-step">Type in your terminal:
+					<code>sudo apt-add-repository -uy ppa:librevault/librevault && sudo apt install -y librevault</code>
+				</div>
 			</div>
 		</div>
 	</section>
