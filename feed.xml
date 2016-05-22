@@ -1,23 +1,80 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.3">Jekyll</generator><link href="https://librevault.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://librevault.com/" rel="alternate" type="text/html" /><updated>2016-05-22T17:48:17+00:00</updated><id>https://librevault.com/</id><title>Librevault</title><entry xml:lang="en"><title>Librevault Basic threat model</title><link href="https://librevault.com/blog/librevault-basic-threat-model/" rel="alternate" type="text/html" title="Librevault Basic threat model" /><published>2016-01-10T04:25:34+00:00</published><updated>2016-01-10T04:25:34+00:00</updated><id>https://librevault.com/blog/librevault-basic-threat-model</id><content type="html" xml:base="https://librevault.com/blog/librevault-basic-threat-model/">&lt;p&gt;In this article we will describe what threats your data exposed to in classic cloud storage services and describe the way Librevault guards against them.&lt;br /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.3">Jekyll</generator><link href="https://librevault.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://librevault.com/" rel="alternate" type="text/html" /><updated>2016-05-22T20:20:22+00:00</updated><id>https://librevault.com/</id><title>Librevault</title><entry xml:lang="en"><title>Secret Structure</title><link href="https://librevault.com/blog/secret-structure/" rel="alternate" type="text/html" title="Secret Structure" /><published>2016-05-22T20:18:39+00:00</published><updated>2016-05-22T20:18:39+00:00</updated><id>https://librevault.com/blog/secret-structure</id><content type="html" xml:base="https://librevault.com/blog/secret-structure/">&lt;p&gt;Secret is a key, used to identify sync folders, perform encryption and peer discovery.
 &lt;!-- more --&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;threat-1-compromised-user&quot;&gt;Threat 1: Compromised User&lt;/h2&gt;
-&lt;p&gt;Remember: You should never consider any computer system to be invulnerable. Your computer is vulnerable too, for example, it can contain malware or &lt;a href=&quot;https://en.wikipedia.org/wiki/Hardware_Trojan&quot;&gt;hardware Trojan&lt;/a&gt;.
-Unfortunately, we can’t protect you from this threat. But we can give you advice:&lt;br /&gt;
-1) Use hardened Operating System. Linux, for example.&lt;br /&gt;
-2) Use antivirus software. It will not provide you perfect protection, but it will decrease probability of being infected by malware.&lt;br /&gt;
-3) Always update your software! Do not disable software auto-update, or the attacker will be able to get your data one day.&lt;/p&gt;
+&lt;h2 id=&quot;general-secret-structure&quot;&gt;General Secret structure&lt;/h2&gt;
 
-&lt;h2 id=&quot;threat-2-compromised-network&quot;&gt;Threat 2: Compromised network&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Man-in-the-middle_attack&quot;&gt;Man-in-the-Middle&lt;/a&gt; attack is an attack, where the attacker secretly relays and possibly alters the communication between you and other Librevault nodes. Such attack can be performed in classic systems, where SSL is being used, but it is very difficult, so it can be performed only by very huge and powerful organization, such as governmental agency.&lt;/p&gt;
+&lt;p&gt;Each Secret consists of four components:&lt;/p&gt;
 
-&lt;p&gt;Such attack is nearly impossible in Librevault, because we use cryptographic systems where you don’t need to trust any third parties, such as &lt;a href=&quot;https://en.wikipedia.org/wiki/Certificate_authority&quot;&gt;Certificate Authorities (CA)&lt;/a&gt; and they can not issue forged SSL certificate.&lt;/p&gt;
+&lt;style type=&quot;text/css&quot; scoped=&quot;&quot;&gt;
+.secret-structure {
+    border: 1px #ccc solid;
+}
+.secret-structure td {
+    border: 1px #ccc solid;
+    padding: 5px;
+}
+&lt;/style&gt;
 
-&lt;h2 id=&quot;threat-3-librevault-backdoor&quot;&gt;Threat 3: Librevault backdoor&lt;/h2&gt;
-&lt;p&gt;Every computer system is vulnerable. That’s a law of nature. Do you remember &lt;a href=&quot;https://en.wikipedia.org/wiki/2014_celebrity_photo_hack&quot;&gt;iCloud leak in 2014&lt;/a&gt;? And what about Dropbox incident, when any file in any account was available without a password?&lt;/p&gt;
+&lt;table class=&quot;secret-structure&quot;&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/td&gt;
+&lt;td&gt;Secret type&lt;/td&gt;
+&lt;td&gt;Param&lt;/td&gt;
+&lt;td&gt;Payload&lt;/td&gt;
+&lt;td&gt;Checksum&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;b&gt;Length&lt;/b&gt;&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;variable&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
 
-&lt;p&gt;It is completely impossible in Librevault! Files on the servers are always encrypted client-side, and the encryption key is located on your computer and only you can decrypt your data. And even if the attacker compromises our servers (and that’s unlikely), it will get only a sequence of random bytes.&lt;br /&gt;
-Also, we are completely honest to you: Librevault client software is completely open-source! You can study its code, review, and improve it (so, it is really a win-win situation for you and us)!&lt;/p&gt;</content><summary>In this article we will describe what threats your data exposed to in classic cloud storage services and describe the way Librevault guards against them.</summary></entry><entry xml:lang="en"><title>Synchronization tools overview</title><link href="https://librevault.com/blog/sync-tools-overview/" rel="alternate" type="text/html" title="Synchronization tools overview" /><published>2015-02-17T07:00:00+00:00</published><updated>2015-02-17T07:00:00+00:00</updated><id>https://librevault.com/blog/sync-tools-overview</id><content type="html" xml:base="https://librevault.com/blog/sync-tools-overview/">&lt;p&gt;There are plenty of file synchronization services available on the Internet. But they all can be divided in two groups:
+&lt;p&gt;Secret may only contain Base58 characters, compatible with &lt;a href=&quot;https://en.wikipedia.org/wiki/Base58&quot;&gt;Bitcoin Base58 dictionary&lt;/a&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;secret-type&quot;&gt;Secret type&lt;/h2&gt;
+&lt;p&gt;The secret can be one of the following types:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A – Owner Secret. This Secret has read-write permissions. Generated by Librevault client.&lt;/li&gt;
+  &lt;li&gt;C – Read-only Secret. Can be derived from “A”-type Secret.&lt;/li&gt;
+  &lt;li&gt;D – Download-only Secret. It is capable only for exchanging and storing encrypted data. Cannot decrypt filenames, content or cryptographic metadata. Can be derived from “A” or “B” type Secret.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;param&quot;&gt;Param&lt;/h2&gt;
+&lt;p&gt;Param is a Base58 character, containing a reserved value, used by Librevault clients. It is intended to be used as an extension point in Secret. It may affect processing of Payload in some way and may have various meanings:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;1 – no special meaning&lt;/li&gt;
+  &lt;li&gt;2–z – invalid value&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;checksum&quot;&gt;Checksum&lt;/h2&gt;
+&lt;p&gt;Checksum is a check-character, computed using &lt;a href=&quot;https://en.wikipedia.org/wiki/Luhn_mod_N_algorithm&quot;&gt;Luhn mod 58 algorithm&lt;/a&gt; using Base58 as a code-point mapping. It is computed from Base58-encoded Payload.&lt;/p&gt;
+
+&lt;h2 id=&quot;payload&quot;&gt;Payload&lt;/h2&gt;
+&lt;p&gt;Payload is a most comlicated part. It is encoded using Base58 algorithm and is dependent on Secret type and Param.
+Base58-decoded payload (binary payload) contains:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Secret type &lt;strong&gt;A&lt;/strong&gt; – Private key.&lt;/li&gt;
+  &lt;li&gt;Secret type &lt;strong&gt;C&lt;/strong&gt; – Public key with Hash of the private key concatenated to it.&lt;/li&gt;
+  &lt;li&gt;Secret type &lt;strong&gt;D&lt;/strong&gt; – Public key.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Public key crypto:&lt;/strong&gt; ECC with &lt;em&gt;secp256r1&lt;/em&gt; curve now, but we should consider switching to &lt;em&gt;&lt;a href=&quot;https://ed25519.cr.yp.to/&quot;&gt;ed25519&lt;/a&gt;&lt;/em&gt; instead (and using Param for distinguishing between them). EC Public keys are in compressed point form.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Hash function:&lt;/strong&gt; &lt;a href=&quot;https://en.wikipedia.org/wiki/SHA-3&quot;&gt;SHA-3&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;folder-identifier&quot;&gt;Folder identifier&lt;/h2&gt;
+&lt;p&gt;Clients use a special unique binary value to find each other over the network without leaking the key. It is computed as a hash value of public key (as in decoded Payload). The hash algorithm must be the same as the algorithm, used by Secret.
+Folder identifier has no defined readable encoding and it is meant to be public and safe for publishing to trackers, the local network and the DHT,&lt;/p&gt;</content><summary>Secret is a key, used to identify sync folders, perform encryption and peer discovery.</summary></entry><entry xml:lang="en"><title>Secret Structure</title><link href="https://librevault.com/blog/features/" rel="alternate" type="text/html" title="Secret Structure" /><published>2016-05-22T16:13:43+00:00</published><updated>2016-05-22T16:13:43+00:00</updated><id>https://librevault.com/blog/features</id><content type="html" xml:base="https://librevault.com/blog/features/">&lt;p&gt;In the world of mass survelli
 &lt;!-- more --&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;i-cloud-storages&quot;&gt;I. Cloud storages&lt;/h2&gt;
@@ -49,4 +106,87 @@ But they have their own caveats:&lt;/p&gt;
   &lt;li&gt;Closed source applications may contain malware code, that can send your personal data to remote servers. If the application has closed source, then this app may do anything with your data.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;That’s it. Each approach has its own caveats. But why don’t we have universal synchronization app, that uses advantage of both of these approaches? We don’t know. That’s why we are developing Librevault…&lt;/p&gt;</content><summary>There are plenty of file synchronization services available on the Internet. But they all can be divided in two groups:</summary></entry></feed>
+&lt;p&gt;That’s it. Each approach has its own caveats. But why don’t we have universal synchronization app, that uses advantage of both of these approaches? We don’t know. That’s why we are developing Librevault…&lt;/p&gt;</content><summary>In the world of mass survelli</summary></entry><entry xml:lang="en"><title>Synchronization tools overview</title><link href="https://librevault.com/blog/security/" rel="alternate" type="text/html" title="Synchronization tools overview" /><published>2016-02-17T07:00:00+00:00</published><updated>2016-02-17T07:00:00+00:00</updated><id>https://librevault.com/blog/security</id><content type="html" xml:base="https://librevault.com/blog/security/">&lt;p&gt;There are plenty of file synchronization services available on the Internet. But they all can be divided in two groups:
+&lt;!-- more --&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;i-cloud-storages&quot;&gt;I. Cloud storages&lt;/h2&gt;
+&lt;p&gt;When you are using these programs you upload your file into, so called, “cloud” (it’s basically a group of servers, maintaining this storage), and then your files are sent to their destinations.&lt;br /&gt;
+This approach is not ideal and has some caveats, such as:
+&lt;!-- more --&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Uploading to server and downloading to destination devices is a really slow process! If you want to send a large file, then you have to wait for a long time until it would be available on the destination device.&lt;/li&gt;
+  &lt;li&gt;You are limited by your cloud storage capacity. You can’t sync a file, that is bigger than your “cloud”. Let’s imagine, that you want to send a Blu-ray disk image to another computer. That is 25 GB file. And if you have only 10 GB free on your “cloud”, then you have to erase files or pay for a more expensive plan.&lt;/li&gt;
+  &lt;li&gt;You are vendor-locked to a single service. If this service goes down, then all your data and business processes, that use file synchronization are lost.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;s&gt;All your base are belong to us!&lt;/s&gt;
+    &lt;p&gt;All your data uploaded to cloud servers can be accessed freely by developer company and they can do anything with it. They can send your data to an advertising company or they can publish it online with free access to all. Or they can transfer your data to massive surveillance organization.&lt;br /&gt;
+People didn’t believe in this earlier, but they started to understand that after &lt;a href=&quot;https://en.wikipedia.org/wiki/Edward_Snowden&quot;&gt;Edward Snowden&lt;/a&gt;’s shocking leaks and interviews.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These caveats lead to developing a new group of synchronization tools:&lt;/p&gt;
+
+&lt;h2 id=&quot;ii-peer-2-peer-synchronizers&quot;&gt;II. Peer-2-peer synchronizers&lt;/h2&gt;
+&lt;p&gt;Applications of this group send data directly from one device to another (peer-2-peer). They don’t store data on the servers, they are not limited by storage capacity and sending a file in a local network takes much less time. Also, these applications can work without Internet.&lt;br /&gt;
+But they have their own caveats:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;For syncing a file you need both devices to be online. So, for example, if you and your partner live in different timezones on different continents, then one of you has to leave computer online at night.&lt;/li&gt;
+  &lt;li&gt;Synchronization algorithms are way less efficient than in centralized system. If a file had been changed on one computer and the difference between files was small, then you may have to retransmit the whole file.&lt;/li&gt;
+  &lt;li&gt;These programs are not really suitable for backup storage, because in cloud storages you don’t have to store your backups by yourself. Professional equipment in large datacenters and engineers would take care of your data and store it very carefully. And without cloud you have to provide enough disk space to store backups, you have to monitor your disk state, because sometimes disks may break accidentally. Or a fire can just destroy all of your disks (your documents, your photos, your memories)&lt;/li&gt;
+  &lt;li&gt;Closed source applications may contain malware code, that can send your personal data to remote servers. If the application has closed source, then this app may do anything with your data.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;That’s it. Each approach has its own caveats. But why don’t we have universal synchronization app, that uses advantage of both of these approaches? We don’t know. That’s why we are developing Librevault…&lt;/p&gt;</content><summary>There are plenty of file synchronization services available on the Internet. But they all can be divided in two groups:</summary></entry><entry xml:lang="en"><title>Synchronization tools overview</title><link href="https://librevault.com/blog/sync-tools-overview/" rel="alternate" type="text/html" title="Synchronization tools overview" /><published>2016-02-17T07:00:00+00:00</published><updated>2016-02-17T07:00:00+00:00</updated><id>https://librevault.com/blog/sync-tools-overview</id><content type="html" xml:base="https://librevault.com/blog/sync-tools-overview/">&lt;p&gt;There are plenty of file synchronization services available on the Internet. But they all can be divided in two groups:
+&lt;!-- more --&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;i-cloud-storages&quot;&gt;I. Cloud storages&lt;/h2&gt;
+&lt;p&gt;When you are using these programs you upload your file into, so called, “cloud” (it’s basically a group of servers, maintaining this storage), and then your files are sent to their destinations.&lt;br /&gt;
+This approach is not ideal and has some caveats, such as:
+&lt;!-- more --&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Uploading to server and downloading to destination devices is a really slow process! If you want to send a large file, then you have to wait for a long time until it would be available on the destination device.&lt;/li&gt;
+  &lt;li&gt;You are limited by your cloud storage capacity. You can’t sync a file, that is bigger than your “cloud”. Let’s imagine, that you want to send a Blu-ray disk image to another computer. That is 25 GB file. And if you have only 10 GB free on your “cloud”, then you have to erase files or pay for a more expensive plan.&lt;/li&gt;
+  &lt;li&gt;You are vendor-locked to a single service. If this service goes down, then all your data and business processes, that use file synchronization are lost.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;s&gt;All your base are belong to us!&lt;/s&gt;
+    &lt;p&gt;All your data uploaded to cloud servers can be accessed freely by developer company and they can do anything with it. They can send your data to an advertising company or they can publish it online with free access to all. Or they can transfer your data to massive surveillance organization.&lt;br /&gt;
+People didn’t believe in this earlier, but they started to understand that after &lt;a href=&quot;https://en.wikipedia.org/wiki/Edward_Snowden&quot;&gt;Edward Snowden&lt;/a&gt;’s shocking leaks and interviews.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These caveats lead to developing a new group of synchronization tools:&lt;/p&gt;
+
+&lt;h2 id=&quot;ii-peer-2-peer-synchronizers&quot;&gt;II. Peer-2-peer synchronizers&lt;/h2&gt;
+&lt;p&gt;Applications of this group send data directly from one device to another (peer-2-peer). They don’t store data on the servers, they are not limited by storage capacity and sending a file in a local network takes much less time. Also, these applications can work without Internet.&lt;br /&gt;
+But they have their own caveats:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;For syncing a file you need both devices to be online. So, for example, if you and your partner live in different timezones on different continents, then one of you has to leave computer online at night.&lt;/li&gt;
+  &lt;li&gt;Synchronization algorithms are way less efficient than in centralized system. If a file had been changed on one computer and the difference between files was small, then you may have to retransmit the whole file.&lt;/li&gt;
+  &lt;li&gt;These programs are not really suitable for backup storage, because in cloud storages you don’t have to store your backups by yourself. Professional equipment in large datacenters and engineers would take care of your data and store it very carefully. And without cloud you have to provide enough disk space to store backups, you have to monitor your disk state, because sometimes disks may break accidentally. Or a fire can just destroy all of your disks (your documents, your photos, your memories)&lt;/li&gt;
+  &lt;li&gt;Closed source applications may contain malware code, that can send your personal data to remote servers. If the application has closed source, then this app may do anything with your data.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;That’s it. Each approach has its own caveats. But why don’t we have universal synchronization app, that uses advantage of both of these approaches? We don’t know. That’s why we are developing Librevault…&lt;/p&gt;</content><summary>There are plenty of file synchronization services available on the Internet. But they all can be divided in two groups:</summary></entry><entry xml:lang="en"><title>Librevault Basic threat model</title><link href="https://librevault.com/blog/librevault-basic-threat-model/" rel="alternate" type="text/html" title="Librevault Basic threat model" /><published>2016-01-10T04:25:34+00:00</published><updated>2016-01-10T04:25:34+00:00</updated><id>https://librevault.com/blog/librevault-basic-threat-model</id><content type="html" xml:base="https://librevault.com/blog/librevault-basic-threat-model/">&lt;p&gt;In this article we will describe what threats your data exposed to in classic cloud storage services and describe the way Librevault guards against them.&lt;br /&gt;
+&lt;!-- more --&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;threat-1-compromised-user&quot;&gt;Threat 1: Compromised User&lt;/h2&gt;
+&lt;p&gt;Remember: You should never consider any computer system to be invulnerable. Your computer is vulnerable too, for example, it can contain malware or &lt;a href=&quot;https://en.wikipedia.org/wiki/Hardware_Trojan&quot;&gt;hardware Trojan&lt;/a&gt;.
+Unfortunately, we can’t protect you from this threat. But we can give you advice:&lt;br /&gt;
+1) Use hardened Operating System. Linux, for example.&lt;br /&gt;
+2) Use antivirus software. It will not provide you perfect protection, but it will decrease probability of being infected by malware.&lt;br /&gt;
+3) Always update your software! Do not disable software auto-update, or the attacker will be able to get your data one day.&lt;/p&gt;
+
+&lt;h2 id=&quot;threat-2-compromised-network&quot;&gt;Threat 2: Compromised network&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Man-in-the-middle_attack&quot;&gt;Man-in-the-Middle&lt;/a&gt; attack is an attack, where the attacker secretly relays and possibly alters the communication between you and other Librevault nodes. Such attack can be performed in classic systems, where SSL is being used, but it is very difficult, so it can be performed only by very huge and powerful organization, such as governmental agency.&lt;/p&gt;
+
+&lt;p&gt;Such attack is nearly impossible in Librevault, because we use cryptographic systems where you don’t need to trust any third parties, such as &lt;a href=&quot;https://en.wikipedia.org/wiki/Certificate_authority&quot;&gt;Certificate Authorities (CA)&lt;/a&gt; and they can not issue forged SSL certificate.&lt;/p&gt;
+
+&lt;h2 id=&quot;threat-3-librevault-backdoor&quot;&gt;Threat 3: Librevault backdoor&lt;/h2&gt;
+&lt;p&gt;Every computer system is vulnerable. That’s a law of nature. Do you remember &lt;a href=&quot;https://en.wikipedia.org/wiki/2014_celebrity_photo_hack&quot;&gt;iCloud leak in 2014&lt;/a&gt;? And what about Dropbox incident, when any file in any account was available without a password?&lt;/p&gt;
+
+&lt;p&gt;It is completely impossible in Librevault! Files on the servers are always encrypted client-side, and the encryption key is located on your computer and only you can decrypt your data. And even if the attacker compromises our servers (and that’s unlikely), it will get only a sequence of random bytes.&lt;br /&gt;
+Also, we are completely honest to you: Librevault client software is completely open-source! You can study its code, review, and improve it (so, it is really a win-win situation for you and us)!&lt;/p&gt;</content><summary>In this article we will describe what threats your data exposed to in classic cloud storage services and describe the way Librevault guards against them.</summary></entry></feed>

@@ -253,11 +253,16 @@ body {
 }
 
 /* line 32, ../../../source/_compass/styles.scss */
-b {
+b, strong {
   font-weight: 700;
 }
 
-/* line 57, ../../../source/_compass/styles.scss */
+/* line 36, ../../../source/_compass/styles.scss */
+i, em {
+  font-style: italic;
+}
+
+/* line 61, ../../../source/_compass/styles.scss */
 .button {
   display: inline-block;
   color: white;
@@ -268,17 +273,17 @@ b {
   font-family: Lato, arial, helvetica, sans-serif;
   border-radius: 5px;
 }
-/* line 42, ../../../source/_compass/styles.scss */
+/* line 46, ../../../source/_compass/styles.scss */
 .button:hover {
   background: #086ca2;
 }
-/* line 45, ../../../source/_compass/styles.scss */
+/* line 49, ../../../source/_compass/styles.scss */
 .button:active {
   transition-duration: 0s;
   background: #075c89;
 }
 
-/* line 65, ../../../source/_compass/styles.scss */
+/* line 69, ../../../source/_compass/styles.scss */
 .wrapper {
   display: flex;
   align-items: center;
@@ -496,11 +501,11 @@ b {
   border-radius: 5px;
   margin: 0 5px;
 }
-/* line 42, ../../../source/_compass/styles.scss */
+/* line 46, ../../../source/_compass/styles.scss */
 .try-stripe .button:hover {
   background: #e6c200;
 }
-/* line 45, ../../../source/_compass/styles.scss */
+/* line 49, ../../../source/_compass/styles.scss */
 .try-stripe .button:active {
   transition-duration: 0s;
   background: #ccac00;
@@ -619,27 +624,27 @@ b {
 }
 
 /* Opened post */
-/* line 4, ../../../source/_compass/_blog-post.scss */
+/* line 2, ../../../source/_compass/_blog-post.scss */
 .opened-post {
   padding: 30px;
   background: white;
 }
-/* line 7, ../../../source/_compass/_blog-post.scss */
+/* line 5, ../../../source/_compass/_blog-post.scss */
 .opened-post .back-link {
   font-family: 'Lato', arial, helvetica, sans-serif;
   text-decoration: none;
 }
-/* line 10, ../../../source/_compass/_blog-post.scss */
+/* line 8, ../../../source/_compass/_blog-post.scss */
 .opened-post .back-link:link, .opened-post .back-link:visited {
   color: #1597dd;
   transition: 0s;
 }
-/* line 14, ../../../source/_compass/_blog-post.scss */
+/* line 12, ../../../source/_compass/_blog-post.scss */
 .opened-post .back-link:hover, .opened-post .back-link:active {
   color: #1177ae;
   transition: .3s;
 }
-/* line 19, ../../../source/_compass/_blog-post.scss */
+/* line 17, ../../../source/_compass/_blog-post.scss */
 .opened-post h1 {
   margin-top: 10px;
   font-size: 32pt;
@@ -647,60 +652,67 @@ b {
   color: #1597dd;
   font-family: 'Lato', arial, helvetica, sans-serif;
 }
-/* line 26, ../../../source/_compass/_blog-post.scss */
+/* line 24, ../../../source/_compass/_blog-post.scss */
 .opened-post .date {
   line-height: 1.7;
   font-weight: bold;
   font-style: italic;
 }
-/* line 31, ../../../source/_compass/_blog-post.scss */
+/* line 29, ../../../source/_compass/_blog-post.scss */
 .opened-post h2 {
   font-size: 22pt;
   line-height: 1.2;
   padding-top: 1.3em;
 }
-/* line 36, ../../../source/_compass/_blog-post.scss */
+/* line 34, ../../../source/_compass/_blog-post.scss */
 .opened-post h3 {
   font-size: 17pt;
   line-height: 1.2;
   padding-top: 0.5em;
 }
-/* line 41, ../../../source/_compass/_blog-post.scss */
+/* line 39, ../../../source/_compass/_blog-post.scss */
 .opened-post .content {
   font-size: 13pt;
   margin-top: 40px;
   line-height: 1.7;
 }
-/* line 46, ../../../source/_compass/_blog-post.scss */
+/* line 44, ../../../source/_compass/_blog-post.scss */
 .opened-post .content ul {
   padding: 10px 0;
 }
-/* line 49, ../../../source/_compass/_blog-post.scss */
+/* line 47, ../../../source/_compass/_blog-post.scss */
 .opened-post .content ul li:before {
   color: #1597dd;
   content: "• ";
   padding-right: 10px;
 }
-/* line 57, ../../../source/_compass/_blog-post.scss */
+/* line 55, ../../../source/_compass/_blog-post.scss */
 .opened-post .share {
   display: flex;
   margin-top: 30px;
   font-size: 18pt;
 }
-/* line 61, ../../../source/_compass/_blog-post.scss */
+/* line 59, ../../../source/_compass/_blog-post.scss */
 .opened-post .share .ya-share2 {
   margin-left: 16px;
   display: inline-block;
 }
-/* line 67, ../../../source/_compass/_blog-post.scss */
+/* line 65, ../../../source/_compass/_blog-post.scss */
 .opened-post a:link, .opened-post a:visited {
   color: #1597dd;
   transition: 0s;
 }
-/* line 71, ../../../source/_compass/_blog-post.scss */
+/* line 69, ../../../source/_compass/_blog-post.scss */
 .opened-post a:hover, .opened-post a:active {
   color: #1177ae;
   transition: .3s;
+}
+/* line 74, ../../../source/_compass/_blog-post.scss */
+.opened-post code {
+  display: block;
+  margin: 10px;
+  font-family: monospace;
+  line-height: 1.5;
 }
 
 /* Download */
@@ -847,11 +859,11 @@ b {
   transition-duration: .3s;
   text-decoration: none;
 }
-/* line 42, ../../../source/_compass/styles.scss */
+/* line 46, ../../../source/_compass/styles.scss */
 .footer .subscribe-form input[type=submit]:hover {
   background: #086ca2;
 }
-/* line 45, ../../../source/_compass/styles.scss */
+/* line 49, ../../../source/_compass/styles.scss */
 .footer .subscribe-form input[type=submit]:active {
   transition-duration: 0s;
   background: #075c89;
