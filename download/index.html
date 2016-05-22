@@ -126,7 +126,7 @@ Downloads - Librevault
 		<div class="platform-block">
 			<h2 class="osname">Windows</h2>
 			<div class="oscomment">Supported versions: Vista, 7, 8, 10</div>
-			<a href="#" class="download-link">Download</a>
+			<a href="https://releases.librevault.com/windows/librevault_latest.exe" class="download-link">Download</a>
 		</div>
 	</section>
 	<section class="download-platform">
@@ -134,7 +134,7 @@ Downloads - Librevault
 		<div class="platform-block">
 			<h2 class="osname">OS X</h2>
 			<div class="oscomment">Supported versions: 10.11 El Capitan</div>
-			<a href="#" class="download-link">Download</a>
+			<a href="https://releases.librevault.com/osx/librevault_latest.dmg" class="download-link">Download</a>
 		</div>
 	</section>
 	<section class="download-platform">
@@ -145,7 +145,10 @@ Downloads - Librevault
 			<a href="#" class="download-link spoiler-link">Install from a repository</a>
 			<div class="spoiler-content">
 				<div class="download-step">Type in your terminal:
-					<code>sudo apt-add-repository -uy ppa:librevault/librevault && sudo apt install -y librevault</code>
+					<code>
+						echo deb https://releases.librevault.com/debian/ $(lsb_release -cs)/ | sudo tee /etc/apt/sources.list.d/librevault.list<br>
+						sudo apt update && sudo apt install -y librevault
+					</code>
 				</div>
 			</div>
 		</div>

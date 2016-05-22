@@ -765,8 +765,9 @@ b {
   display: block;
   margin-top: 20px;
   font-family: monospace;
+  line-height: 2em;
 }
-/* line 56, ../../../source/_compass/_download.scss */
+/* line 57, ../../../source/_compass/_download.scss */
 .download #build-yourself h2 {
   font-size: 20pt;
   line-height: 1.5;
