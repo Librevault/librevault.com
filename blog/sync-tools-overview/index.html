@@ -161,7 +161,19 @@ But they have their own caveats:</p>
 			
 			<section>
 				<h1>Comments</h1>
-				
+				<div id='discourse-comments'></div>
+
+<script type="text/javascript">
+    DiscourseEmbed = { discourseUrl: 'https://forum.librevault.com/',
+        discourseEmbedUrl: '/blog/sync-tools-overview/' };
+
+    (function() {
+        var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+        d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+    })();
+</script>
+<!--
 
 <script type="text/javascript">
       var disqus_shortname = 'librevault';
@@ -179,7 +191,7 @@ But they have their own caveats:</p>
     }());
 </script>
 
-
+-->
 				<div id="disqus_thread" aria-live="polite">
 					<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 				</div>

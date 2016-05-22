@@ -628,23 +628,25 @@ i, em {
 .opened-post {
   padding: 30px;
   background: white;
+  box-sizing: border-box;
+  width: 100%;
 }
-/* line 5, ../../../source/_compass/_blog-post.scss */
+/* line 7, ../../../source/_compass/_blog-post.scss */
 .opened-post .back-link {
   font-family: 'Lato', arial, helvetica, sans-serif;
   text-decoration: none;
 }
-/* line 8, ../../../source/_compass/_blog-post.scss */
+/* line 10, ../../../source/_compass/_blog-post.scss */
 .opened-post .back-link:link, .opened-post .back-link:visited {
   color: #1597dd;
   transition: 0s;
 }
-/* line 12, ../../../source/_compass/_blog-post.scss */
+/* line 14, ../../../source/_compass/_blog-post.scss */
 .opened-post .back-link:hover, .opened-post .back-link:active {
   color: #1177ae;
   transition: .3s;
 }
-/* line 17, ../../../source/_compass/_blog-post.scss */
+/* line 19, ../../../source/_compass/_blog-post.scss */
 .opened-post h1 {
   margin-top: 10px;
   font-size: 32pt;
@@ -652,62 +654,62 @@ i, em {
   color: #1597dd;
   font-family: 'Lato', arial, helvetica, sans-serif;
 }
-/* line 24, ../../../source/_compass/_blog-post.scss */
+/* line 26, ../../../source/_compass/_blog-post.scss */
 .opened-post .date {
   line-height: 1.7;
   font-weight: bold;
   font-style: italic;
 }
-/* line 29, ../../../source/_compass/_blog-post.scss */
+/* line 31, ../../../source/_compass/_blog-post.scss */
 .opened-post h2 {
   font-size: 22pt;
   line-height: 1.2;
   padding-top: 1.3em;
 }
-/* line 34, ../../../source/_compass/_blog-post.scss */
+/* line 36, ../../../source/_compass/_blog-post.scss */
 .opened-post h3 {
   font-size: 17pt;
   line-height: 1.2;
   padding-top: 0.5em;
 }
-/* line 39, ../../../source/_compass/_blog-post.scss */
+/* line 41, ../../../source/_compass/_blog-post.scss */
 .opened-post .content {
   font-size: 13pt;
   margin-top: 40px;
   line-height: 1.7;
 }
-/* line 44, ../../../source/_compass/_blog-post.scss */
+/* line 46, ../../../source/_compass/_blog-post.scss */
 .opened-post .content ul {
   padding: 10px 0;
 }
-/* line 47, ../../../source/_compass/_blog-post.scss */
+/* line 49, ../../../source/_compass/_blog-post.scss */
 .opened-post .content ul li:before {
   color: #1597dd;
   content: "• ";
   padding-right: 10px;
 }
-/* line 55, ../../../source/_compass/_blog-post.scss */
+/* line 57, ../../../source/_compass/_blog-post.scss */
 .opened-post .share {
   display: flex;
   margin-top: 30px;
   font-size: 18pt;
 }
-/* line 59, ../../../source/_compass/_blog-post.scss */
+/* line 61, ../../../source/_compass/_blog-post.scss */
 .opened-post .share .ya-share2 {
   margin-left: 16px;
   display: inline-block;
 }
-/* line 65, ../../../source/_compass/_blog-post.scss */
+/* line 67, ../../../source/_compass/_blog-post.scss */
 .opened-post a:link, .opened-post a:visited {
   color: #1597dd;
   transition: 0s;
 }
-/* line 69, ../../../source/_compass/_blog-post.scss */
+/* line 71, ../../../source/_compass/_blog-post.scss */
 .opened-post a:hover, .opened-post a:active {
   color: #1177ae;
   transition: .3s;
 }
-/* line 74, ../../../source/_compass/_blog-post.scss */
+/* line 76, ../../../source/_compass/_blog-post.scss */
 .opened-post code {
   display: block;
   margin: 10px;
