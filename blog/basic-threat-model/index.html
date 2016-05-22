@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>
-Librevault features overview - Librevault
+Librevault Basic threat model - Librevault
 </title>
 
 	<!-- Favicons -->
@@ -114,23 +114,29 @@ Librevault features overview - Librevault
 	<div class="wrapper">
 		<article class="opened-post">
 			<a href="/blog" class="back-link">&larr; Back to overview</a>
-			<h1 class="post-title">Librevault features overview</h1>
-			<div class="date">May 22, 2016</div>
+			<h1 class="post-title">Librevault Basic threat model</h1>
+			<div class="date">January 10, 2016</div>
 			<div class="content">
-				<h2 id="what-is-librevault">What is Librevault?</h2>
-
-<p>Librevault is a data synchronization app, designed to keep files same on different computers over the network.
+				<p>In this article we will describe what threats your data exposed to in classic cloud storage services and describe the way Librevault guards against them.<br />
 <!-- more --></p>
 
-<h2 id="peer-to-peer-file-transfer">Peer-to-peer file transfer</h2>
-<p>All data is transferred directly from one device to another without the need to upload them to other servers. You can use Librevault in your local network even if the Internet connection is unavailable.</p>
+<h2 id="threat-1-compromised-user">Threat 1: Compromised User</h2>
+<p>Remember: You should never consider any computer system to be invulnerable. Your computer is vulnerable too, for example, it can contain malware or <a href="https://en.wikipedia.org/wiki/Hardware_Trojan">hardware Trojan</a>.
+Unfortunately, we can’t protect you from this threat. But we can give you advice:<br />
+1) Use hardened Operating System. Linux, for example.<br />
+2) Use antivirus software. It will not provide you perfect protection, but it will decrease probability of being infected by malware.<br />
+3) Always update your software! Do not disable software auto-update, or the attacker will be able to get your data one day.</p>
 
-<h2 id="data-encryption">Data encryption</h2>
-<ul>
-  <li>All file content and filenames are encrypted using an industry-grade <a href="https://en.wikipedia.org/wiki/Advanced_Encryption_Standard">AES-256</a> algorithm.</li>
-  <li>All transmissions are performed using <a href="https://en.wikipedia.org/wiki/Transport_Layer_Security#TLS_1.2">TLSv1.2</a></li>
-  <li>The hash algorithm is <a href="https://en.wikipedia.org/wiki/SHA-3">SHA-3</a></li>
-</ul>
+<h2 id="threat-2-compromised-network">Threat 2: Compromised network</h2>
+<p><a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack">Man-in-the-Middle</a> attack is an attack, where the attacker secretly relays and possibly alters the communication between you and other Librevault nodes. Such attack can be performed in classic systems, where SSL is being used, but it is very difficult, so it can be performed only by very huge and powerful organization, such as governmental agency.</p>
+
+<p>Such attack is nearly impossible in Librevault, because we use cryptographic systems where you don’t need to trust any third parties, such as <a href="https://en.wikipedia.org/wiki/Certificate_authority">Certificate Authorities (CA)</a> and they can not issue forged SSL certificate.</p>
+
+<h2 id="threat-3-librevault-backdoor">Threat 3: Librevault backdoor</h2>
+<p>Every computer system is vulnerable. That’s a law of nature. Do you remember <a href="https://en.wikipedia.org/wiki/2014_celebrity_photo_hack">iCloud leak in 2014</a>? And what about Dropbox incident, when any file in any account was available without a password?</p>
+
+<p>It is completely impossible in Librevault! Files on the servers are always encrypted client-side, and the encryption key is located on your computer and only you can decrypt your data. And even if the attacker compromises our servers (and that’s unlikely), it will get only a sequence of random bytes.<br />
+Also, we are completely honest to you: Librevault client software is completely open-source! You can study its code, review, and improve it (so, it is really a win-win situation for you and us)!</p>
 
 			</div>
 			<div class="share">
@@ -149,8 +155,8 @@ Librevault features overview - Librevault
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = '/blog/features';
-        var disqus_url = 'https://librevault.com/blog/features/';
+        var disqus_identifier = '/blog/basic-threat-model';
+        var disqus_url = 'https://librevault.com/blog/basic-threat-model/';
         var disqus_script = 'embed.js';
       
     (function () {

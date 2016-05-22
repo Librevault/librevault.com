@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.3">Jekyll</generator><link href="https://librevault.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://librevault.com/" rel="alternate" type="text/html" /><updated>2016-05-22T20:39:07+00:00</updated><id>https://librevault.com/</id><title>Librevault</title><entry xml:lang="en"><title>Secret Structure</title><link href="https://librevault.com/blog/secret-structure/" rel="alternate" type="text/html" title="Secret Structure" /><published>2016-05-22T20:18:39+00:00</published><updated>2016-05-22T20:18:39+00:00</updated><id>https://librevault.com/blog/secret-structure</id><content type="html" xml:base="https://librevault.com/blog/secret-structure/">&lt;p&gt;Secret is a key, used to identify sync folders, perform encryption and peer discovery.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.3">Jekyll</generator><link href="https://librevault.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://librevault.com/" rel="alternate" type="text/html" /><updated>2016-05-22T22:34:46+00:00</updated><id>https://librevault.com/</id><title>Librevault</title><entry xml:lang="en"><title>Secret Structure</title><link href="https://librevault.com/blog/secret-structure/" rel="alternate" type="text/html" title="Secret Structure" /><published>2016-05-22T20:18:39+00:00</published><updated>2016-05-22T20:18:39+00:00</updated><id>https://librevault.com/blog/secret-structure</id><content type="html" xml:base="https://librevault.com/blog/secret-structure/">&lt;p&gt;Secret is a key, used to identify sync folders, perform encryption and peer discovery.
 &lt;!-- more --&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;general-secret-structure&quot;&gt;General Secret structure&lt;/h2&gt;
@@ -74,7 +74,20 @@ Base58-decoded payload (binary payload) contains:&lt;/p&gt;
 
 &lt;h2 id=&quot;folder-identifier&quot;&gt;Folder identifier&lt;/h2&gt;
 &lt;p&gt;Clients use a special unique binary value to find each other over the network without leaking the key. It is computed as a hash value of public key (as in decoded Payload). The hash algorithm must be the same as the algorithm, used by Secret.
-Folder identifier has no defined readable encoding and it is meant to be public and safe for publishing to trackers, the local network and the DHT,&lt;/p&gt;</content><summary>Secret is a key, used to identify sync folders, perform encryption and peer discovery.</summary></entry><entry xml:lang="en"><title>Secret Structure</title><link href="https://librevault.com/blog/features/" rel="alternate" type="text/html" title="Secret Structure" /><published>2016-05-22T16:13:43+00:00</published><updated>2016-05-22T16:13:43+00:00</updated><id>https://librevault.com/blog/features</id><content type="html" xml:base="https://librevault.com/blog/features/">&lt;p&gt;In the world of mass survelli
+Folder identifier has no defined readable encoding and it is meant to be public and safe for publishing to trackers, the local network and the DHT,&lt;/p&gt;</content><summary>Secret is a key, used to identify sync folders, perform encryption and peer discovery.</summary></entry><entry xml:lang="en"><title>Librevault features overview</title><link href="https://librevault.com/blog/features/" rel="alternate" type="text/html" title="Librevault features overview" /><published>2016-05-22T16:13:43+00:00</published><updated>2016-05-22T16:13:43+00:00</updated><id>https://librevault.com/blog/features</id><content type="html" xml:base="https://librevault.com/blog/features/">&lt;h2 id=&quot;what-is-librevault&quot;&gt;What is Librevault?&lt;/h2&gt;
+
+&lt;p&gt;Librevault is a data synchronization app, designed to keep files same on different computers over the network.
+&lt;!-- more --&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;peer-to-peer-file-transfer&quot;&gt;Peer-to-peer file transfer&lt;/h2&gt;
+&lt;p&gt;All data is transferred directly from one device to another without the need to upload them to other servers. You can use Librevault in your local network even if the Internet connection is unavailable.&lt;/p&gt;
+
+&lt;h2 id=&quot;data-encryption&quot;&gt;Data encryption&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;All file content and filenames are encrypted using an industry-grade &lt;a href=&quot;https://en.wikipedia.org/wiki/Advanced_Encryption_Standard&quot;&gt;AES-256&lt;/a&gt; algorithm.&lt;/li&gt;
+  &lt;li&gt;All transmissions are performed using &lt;a href=&quot;https://en.wikipedia.org/wiki/Transport_Layer_Security#TLS_1.2&quot;&gt;TLSv1.2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;The hash algorithm is &lt;a href=&quot;https://en.wikipedia.org/wiki/SHA-3&quot;&gt;SHA-3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><summary>What is Librevault?</summary></entry><entry xml:lang="en"><title>Synchronization tools overview</title><link href="https://librevault.com/blog/sync-tools-overview/" rel="alternate" type="text/html" title="Synchronization tools overview" /><published>2016-02-17T07:00:00+00:00</published><updated>2016-02-17T07:00:00+00:00</updated><id>https://librevault.com/blog/sync-tools-overview</id><content type="html" xml:base="https://librevault.com/blog/sync-tools-overview/">&lt;p&gt;There are plenty of file synchronization services available on the Internet. But they all can be divided in two groups:
 &lt;!-- more --&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;i-cloud-storages&quot;&gt;I. Cloud storages&lt;/h2&gt;
@@ -106,71 +119,7 @@ But they have their own caveats:&lt;/p&gt;
   &lt;li&gt;Closed source applications may contain malware code, that can send your personal data to remote servers. If the application has closed source, then this app may do anything with your data.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;That’s it. Each approach has its own caveats. But why don’t we have universal synchronization app, that uses advantage of both of these approaches? We don’t know. That’s why we are developing Librevault…&lt;/p&gt;</content><summary>In the world of mass survelli</summary></entry><entry xml:lang="en"><title>Synchronization tools overview</title><link href="https://librevault.com/blog/security/" rel="alternate" type="text/html" title="Synchronization tools overview" /><published>2016-02-17T07:00:00+00:00</published><updated>2016-02-17T07:00:00+00:00</updated><id>https://librevault.com/blog/security</id><content type="html" xml:base="https://librevault.com/blog/security/">&lt;p&gt;There are plenty of file synchronization services available on the Internet. But they all can be divided in two groups:
-&lt;!-- more --&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;i-cloud-storages&quot;&gt;I. Cloud storages&lt;/h2&gt;
-&lt;p&gt;When you are using these programs you upload your file into, so called, “cloud” (it’s basically a group of servers, maintaining this storage), and then your files are sent to their destinations.&lt;br /&gt;
-This approach is not ideal and has some caveats, such as:
-&lt;!-- more --&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Uploading to server and downloading to destination devices is a really slow process! If you want to send a large file, then you have to wait for a long time until it would be available on the destination device.&lt;/li&gt;
-  &lt;li&gt;You are limited by your cloud storage capacity. You can’t sync a file, that is bigger than your “cloud”. Let’s imagine, that you want to send a Blu-ray disk image to another computer. That is 25 GB file. And if you have only 10 GB free on your “cloud”, then you have to erase files or pay for a more expensive plan.&lt;/li&gt;
-  &lt;li&gt;You are vendor-locked to a single service. If this service goes down, then all your data and business processes, that use file synchronization are lost.&lt;/li&gt;
-  &lt;li&gt;
-    &lt;s&gt;All your base are belong to us!&lt;/s&gt;
-    &lt;p&gt;All your data uploaded to cloud servers can be accessed freely by developer company and they can do anything with it. They can send your data to an advertising company or they can publish it online with free access to all. Or they can transfer your data to massive surveillance organization.&lt;br /&gt;
-People didn’t believe in this earlier, but they started to understand that after &lt;a href=&quot;https://en.wikipedia.org/wiki/Edward_Snowden&quot;&gt;Edward Snowden&lt;/a&gt;’s shocking leaks and interviews.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;These caveats lead to developing a new group of synchronization tools:&lt;/p&gt;
-
-&lt;h2 id=&quot;ii-peer-2-peer-synchronizers&quot;&gt;II. Peer-2-peer synchronizers&lt;/h2&gt;
-&lt;p&gt;Applications of this group send data directly from one device to another (peer-2-peer). They don’t store data on the servers, they are not limited by storage capacity and sending a file in a local network takes much less time. Also, these applications can work without Internet.&lt;br /&gt;
-But they have their own caveats:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;For syncing a file you need both devices to be online. So, for example, if you and your partner live in different timezones on different continents, then one of you has to leave computer online at night.&lt;/li&gt;
-  &lt;li&gt;Synchronization algorithms are way less efficient than in centralized system. If a file had been changed on one computer and the difference between files was small, then you may have to retransmit the whole file.&lt;/li&gt;
-  &lt;li&gt;These programs are not really suitable for backup storage, because in cloud storages you don’t have to store your backups by yourself. Professional equipment in large datacenters and engineers would take care of your data and store it very carefully. And without cloud you have to provide enough disk space to store backups, you have to monitor your disk state, because sometimes disks may break accidentally. Or a fire can just destroy all of your disks (your documents, your photos, your memories)&lt;/li&gt;
-  &lt;li&gt;Closed source applications may contain malware code, that can send your personal data to remote servers. If the application has closed source, then this app may do anything with your data.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;That’s it. Each approach has its own caveats. But why don’t we have universal synchronization app, that uses advantage of both of these approaches? We don’t know. That’s why we are developing Librevault…&lt;/p&gt;</content><summary>There are plenty of file synchronization services available on the Internet. But they all can be divided in two groups:</summary></entry><entry xml:lang="en"><title>Synchronization tools overview</title><link href="https://librevault.com/blog/sync-tools-overview/" rel="alternate" type="text/html" title="Synchronization tools overview" /><published>2016-02-17T07:00:00+00:00</published><updated>2016-02-17T07:00:00+00:00</updated><id>https://librevault.com/blog/sync-tools-overview</id><content type="html" xml:base="https://librevault.com/blog/sync-tools-overview/">&lt;p&gt;There are plenty of file synchronization services available on the Internet. But they all can be divided in two groups:
-&lt;!-- more --&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;i-cloud-storages&quot;&gt;I. Cloud storages&lt;/h2&gt;
-&lt;p&gt;When you are using these programs you upload your file into, so called, “cloud” (it’s basically a group of servers, maintaining this storage), and then your files are sent to their destinations.&lt;br /&gt;
-This approach is not ideal and has some caveats, such as:
-&lt;!-- more --&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Uploading to server and downloading to destination devices is a really slow process! If you want to send a large file, then you have to wait for a long time until it would be available on the destination device.&lt;/li&gt;
-  &lt;li&gt;You are limited by your cloud storage capacity. You can’t sync a file, that is bigger than your “cloud”. Let’s imagine, that you want to send a Blu-ray disk image to another computer. That is 25 GB file. And if you have only 10 GB free on your “cloud”, then you have to erase files or pay for a more expensive plan.&lt;/li&gt;
-  &lt;li&gt;You are vendor-locked to a single service. If this service goes down, then all your data and business processes, that use file synchronization are lost.&lt;/li&gt;
-  &lt;li&gt;
-    &lt;s&gt;All your base are belong to us!&lt;/s&gt;
-    &lt;p&gt;All your data uploaded to cloud servers can be accessed freely by developer company and they can do anything with it. They can send your data to an advertising company or they can publish it online with free access to all. Or they can transfer your data to massive surveillance organization.&lt;br /&gt;
-People didn’t believe in this earlier, but they started to understand that after &lt;a href=&quot;https://en.wikipedia.org/wiki/Edward_Snowden&quot;&gt;Edward Snowden&lt;/a&gt;’s shocking leaks and interviews.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;These caveats lead to developing a new group of synchronization tools:&lt;/p&gt;
-
-&lt;h2 id=&quot;ii-peer-2-peer-synchronizers&quot;&gt;II. Peer-2-peer synchronizers&lt;/h2&gt;
-&lt;p&gt;Applications of this group send data directly from one device to another (peer-2-peer). They don’t store data on the servers, they are not limited by storage capacity and sending a file in a local network takes much less time. Also, these applications can work without Internet.&lt;br /&gt;
-But they have their own caveats:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;For syncing a file you need both devices to be online. So, for example, if you and your partner live in different timezones on different continents, then one of you has to leave computer online at night.&lt;/li&gt;
-  &lt;li&gt;Synchronization algorithms are way less efficient than in centralized system. If a file had been changed on one computer and the difference between files was small, then you may have to retransmit the whole file.&lt;/li&gt;
-  &lt;li&gt;These programs are not really suitable for backup storage, because in cloud storages you don’t have to store your backups by yourself. Professional equipment in large datacenters and engineers would take care of your data and store it very carefully. And without cloud you have to provide enough disk space to store backups, you have to monitor your disk state, because sometimes disks may break accidentally. Or a fire can just destroy all of your disks (your documents, your photos, your memories)&lt;/li&gt;
-  &lt;li&gt;Closed source applications may contain malware code, that can send your personal data to remote servers. If the application has closed source, then this app may do anything with your data.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;That’s it. Each approach has its own caveats. But why don’t we have universal synchronization app, that uses advantage of both of these approaches? We don’t know. That’s why we are developing Librevault…&lt;/p&gt;</content><summary>There are plenty of file synchronization services available on the Internet. But they all can be divided in two groups:</summary></entry><entry xml:lang="en"><title>Librevault Basic threat model</title><link href="https://librevault.com/blog/librevault-basic-threat-model/" rel="alternate" type="text/html" title="Librevault Basic threat model" /><published>2016-01-10T04:25:34+00:00</published><updated>2016-01-10T04:25:34+00:00</updated><id>https://librevault.com/blog/librevault-basic-threat-model</id><content type="html" xml:base="https://librevault.com/blog/librevault-basic-threat-model/">&lt;p&gt;In this article we will describe what threats your data exposed to in classic cloud storage services and describe the way Librevault guards against them.&lt;br /&gt;
+&lt;p&gt;That’s it. Each approach has its own caveats. But why don’t we have universal synchronization app, that uses advantage of both of these approaches? We don’t know. That’s why we are developing Librevault…&lt;/p&gt;</content><summary>There are plenty of file synchronization services available on the Internet. But they all can be divided in two groups:</summary></entry><entry xml:lang="en"><title>Librevault Basic threat model</title><link href="https://librevault.com/blog/basic-threat-model/" rel="alternate" type="text/html" title="Librevault Basic threat model" /><published>2016-01-10T04:25:34+00:00</published><updated>2016-01-10T04:25:34+00:00</updated><id>https://librevault.com/blog/basic-threat-model</id><content type="html" xml:base="https://librevault.com/blog/basic-threat-model/">&lt;p&gt;In this article we will describe what threats your data exposed to in classic cloud storage services and describe the way Librevault guards against them.&lt;br /&gt;
 &lt;!-- more --&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;threat-1-compromised-user&quot;&gt;Threat 1: Compromised User&lt;/h2&gt;
