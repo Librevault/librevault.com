@@ -1,3 +1,4 @@
 User-Agent: *
 Disallow:
 Host: https://librevault.com
+Sitemap: https://librevault.com/sitemap.xml
