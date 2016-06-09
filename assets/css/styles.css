@@ -711,10 +711,28 @@ i, em {
 }
 /* line 76, ../../../source/_compass/_blog-post.scss */
 .opened-post code {
-  display: block;
-  margin: 10px;
+  display: inline-block;
   font-family: monospace;
   line-height: 1.5;
+}
+/* line 81, ../../../source/_compass/_blog-post.scss */
+.opened-post pre code {
+  padding: 5px;
+  margin: 5px;
+  background-color: #eee;
+}
+/* line 86, ../../../source/_compass/_blog-post.scss */
+.opened-post table {
+  border: 1px #ccc solid;
+}
+/* line 88, ../../../source/_compass/_blog-post.scss */
+.opened-post table td, .opened-post table th {
+  border: 1px #ccc solid;
+  padding: 5px;
+}
+/* line 92, ../../../source/_compass/_blog-post.scss */
+.opened-post table th {
+  font-weight: bold;
 }
 
 /* Download */
