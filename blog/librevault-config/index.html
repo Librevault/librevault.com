@@ -150,28 +150,28 @@ Librevault Configuration - Librevault
 <h2>client.conf:</h2>
 <table border="1" class="docutils">
 <colgroup>
-<col width="12%" />
+<col width="13%" />
 <col width="7%" />
-<col width="81%" />
+<col width="80%" />
 </colgroup>
 <thead valign="bottom">
 <tr><th class="head">Name</th>
 <th class="head">Type</th>
-<th class="head">Meaning of Values</th>
+<th class="head">Value semantics</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr><td>client_name</td>
 <td>string</td>
-<td>Defines the name of the device to be sent to the other nodes, so the other nodes could identify this node easily. <strong>Default:</strong> hostname of client device</td>
+<td>The name of the device to be sent to the other nodes, so the other nodes could identify this node easily. <strong>Default:</strong> hostname of client device</td>
 </tr>
 <tr><td>control_listen</td>
 <td>string</td>
-<td>Defines host and port, on which the Librevault application will handle WebSocket API connections. <strong>Default:</strong> [::]:42346</td>
+<td>Host and port, on which the Librevault application will handle WebSocket API connections. <strong>Default:</strong> [::]:42346</td>
 </tr>
 <tr><td>p2p_listen</td>
 <td>string</td>
-<td>Defines host and port, on which the Librevault application will listen for incoming connections. 0 as port stands for random port. <strong>Default:</strong> [::]:42345</td>
+<td>Host and port, on which the Librevault application will listen for incoming connections. 0 as port stands for random port. <strong>Default:</strong> [::]:42345</td>
 </tr>
 <tr><td>p2p_download_slots</td>
 <td>integer</td>
@@ -203,11 +203,11 @@ Librevault Configuration - Librevault
 </tr>
 <tr><td>multicast4_group</td>
 <td>string</td>
-<td>Specifies IPv4 multicast group to connect to and receive multicast requests from. <strong>Default:</strong> 239.192.152.144:28914</td>
+<td>IPv4 multicast group to connect to and receive multicast requests from. <strong>Default:</strong> 239.192.152.144:28914</td>
 </tr>
 <tr><td>multicast4_repeat_interval</td>
 <td>integer</td>
-<td>Specifies interval in seconds between sending IPv4 multicast requests. <strong>Default:</strong> 30</td>
+<td>Interval in seconds between sending IPv4 multicast requests. <strong>Default:</strong> 30</td>
 </tr>
 <tr><td>multicast6_enabled</td>
 <td>bool</td>
@@ -215,11 +215,11 @@ Librevault Configuration - Librevault
 </tr>
 <tr><td>multicast6_group</td>
 <td>string</td>
-<td>Specifies IPv6 multicast group to connect to and receive multicast requests from. <strong>Default:</strong> [ff08::BD02]:28914</td>
+<td>IPv6 multicast group to connect to and receive multicast requests from. <strong>Default:</strong> [ff08::BD02]:28914</td>
 </tr>
 <tr><td>multicast6_repeat_interval</td>
 <td>integer</td>
-<td>Specifies interval in seconds between sending IPv4 multicast requests. <strong>Default:</strong> 30</td>
+<td>Interval in seconds between sending IPv4 multicast requests. <strong>Default:</strong> 30</td>
 </tr>
 <tr><td>bttracker_enabled</td>
 <td>bool</td>
@@ -235,11 +235,11 @@ Librevault Configuration - Librevault
 </tr>
 <tr><td>bttracker_azureus_id</td>
 <td>string</td>
-<td>This option can be used to mask Librevault client as any other torrent-client, that uses Azuerus-style encoding for peer_id. May break Librevault Cloud tracker. <strong>Default:</strong> -LV0001-</td>
+<td>This option can be used to mask Librevault client as any other torrent-client, that uses Azuerus-style encoding for peer_id. May break Librevault tracker. <strong>Default:</strong> -LV0001-</td>
 </tr>
 <tr><td>bttracker_reconnect_interval</td>
 <td>integer</td>
-<td>Specifies interval (in seconds) between sending new connection request to UDP tracker. <strong>Default:</strong> 30</td>
+<td>Interval (in seconds) between sending new connection request to UDP tracker. <strong>Default:</strong> 30</td>
 </tr>
 <tr><td>bttracker_packet_timeout</td>
 <td>integer</td>
@@ -247,7 +247,7 @@ Librevault Configuration - Librevault
 </tr>
 <tr><td>bttracker_trackers</td>
 <td>array of strings</td>
-<td>Specifies URLs of trackers to announce to. Supports only UDP trackers using <code>udp://</code> scheme. <strong>Default:</strong> some hardcoded open trackers</td>
+<td>URLs of trackers to announce to. Supports only UDP trackers using <code>udp://</code> scheme. <strong>Default:</strong> some hardcoded open trackers</td>
 </tr>
 </tbody>
 </table>
@@ -263,43 +263,43 @@ Librevault Configuration - Librevault
 <thead valign="bottom">
 <tr><th class="head">Name</th>
 <th class="head">Type</th>
-<th class="head">Meaning of Values</th>
+<th class="head">Value semantics</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr><td>secret</td>
 <td>string</td>
-<td>Specifies Secret of directory, served by client.</td>
+<td>Secret of directory, served by client.</td>
 </tr>
 <tr><td>path</td>
 <td>string</td>
-<td>Specifies directory path, where files are supposed to be. This directory will be watched for changes.</td>
+<td>Directory path, where files are supposed to be. This directory will be watched for changes.</td>
 </tr>
 <tr><td>system_path</td>
 <td>string</td>
-<td>Specifies directory path for the folder's configuration and index <strong>Default:</strong> <cite>folders.*.path</cite>/.librevault</td>
+<td>Directory path for the folder's configuration and index. Tbe best results are achieved if located on the same device as the synchronized folder. <strong>Default:</strong> <cite>folders.*.path</cite>/.librevault</td>
 </tr>
 <tr><td>index_event_timeout</td>
 <td>integer</td>
-<td>Specifies timeout (in milliseconds) between receiving directory change and committing it. <strong>Default:</strong> 1000</td>
+<td>Timeout (in milliseconds) between receiving directory change and committing it. <strong>Default:</strong> 1000</td>
 </tr>
 <tr><td>preserve_unix_attrib</td>
 <td>bool</td>
-<td><p class="first">Specifies, whether to preserve Unix attributes stat() attributes (mode, uid, gid). May require root priveleges to run, because default uid/gid for clients without this option equals 0 (root).</p>
+<td><p class="first">Enables preserving Unix attributes stat() attributes (mode, uid, gid). May require root priveleges to run, because default uid/gid for clients without this option equals 0 (root).</p>
 <p><strong>WARNING:</strong> This is a special option for special cases; do not enable it unless you really know what you are doing.</p>
-<p class="last"><em>NOTE:</em>  This option must be enabled on both &quot;indexing node&quot; and &quot;receiving mode&quot; to operate correctly. <strong>Default:</strong> false</p>
+<p class="last"><em>NOTE:</em>  This option must be enabled on both &quot;indexing node&quot; and &quot;receiving node&quot; to operate correctly. <strong>Default:</strong> false</p>
 </td>
 </tr>
 <tr><td>preserve_windows_attrib</td>
 <td>bool</td>
-<td><p class="first">Specifies, whether to preserve Windows attributes (Read-Only/Hidden/System/Archive).</p>
+<td><p class="first">Enables preserving Windows attributes (Read-Only/Hidden/System/Archive).</p>
 <p><strong>WARNING:</strong> This is a special option for special cases; do not enable it unless you really know what you are doing.</p>
-<p class="last"><em>NOTE:</em>  This option must be enabled on both &quot;indexing node&quot; and &quot;receiving mode&quot; to operate correctly. <strong>Default:</strong> false</p>
+<p class="last"><em>NOTE:</em>  This option must be enabled on both &quot;indexing node&quot; and &quot;receiving node&quot; to operate correctly. <strong>Default:</strong> false</p>
 </td>
 </tr>
 <tr><td>preserve_symlinks</td>
 <td>bool</td>
-<td>Specifies, whether to preserve symbolic links or not. Used only for indexing. <strong>Default:</strong> false</td>
+<td>Enables preserving symbolic links. Used only for indexing. <strong>Default:</strong> false</td>
 </tr>
 <tr><td>chunk_strong_hash_type</td>
 <td>integer</td>
@@ -307,15 +307,27 @@ Librevault Configuration - Librevault
 </tr>
 <tr><td>full_rescan_interval</td>
 <td>integer</td>
-<td>Specifies interval (in seconds) between full directory rescans. Useful to mitigate file watcher inaccuracy. <strong>Default:</strong> 60</td>
+<td>Interval (in seconds) between full directory rescans. Useful to mitigate file watcher inaccuracy. <strong>Default:</strong> 60</td>
 </tr>
 <tr><td>ignore_paths</td>
 <td>array of strings</td>
-<td>Specifies a list of ignored files. The files must be specified in ECMAScript RegExp notation (RegExp supported). Please, don't forget to add your <em>system_path</em> to ignore_paths to avoid indexing recursion deadlock. <strong>Default and cannot be overridden</strong>: <code>^\.system_path(?:\/(?:.*))?</code>, where system_path is escaped and substituted from config parameter.</td>
+<td>List of ignored files. The files must be specified in ECMAScript RegExp notation (RegExp supported). Please, don't forget to add your <em>system_path</em> to ignore_paths to avoid indexing recursion deadlock. <strong>Default and cannot be overridden</strong>: <code>^\.system_path(?:\/(?:.*))?</code>, where system_path is escaped and substituted from config parameter.</td>
 </tr>
 <tr><td>nodes</td>
 <td>array of strings</td>
-<td>Specifies a hard-coded list of nodes to exchange files with.</td>
+<td>Hard-coded list of nodes to exchange files with.</td>
+</tr>
+<tr><td>archive_type</td>
+<td>string</td>
+<td>Type of versioning for this directory. Can be &quot;none&quot;, &quot;trash&quot;, &quot;timestamp&quot; or &quot;block&quot;. <strong>Default:</strong> &quot;trash&quot;</td>
+</tr>
+<tr><td>archive_trash_ttl</td>
+<td>integer</td>
+<td>Timeout (in days) between placing a file in trash folder and being wiped out. Used only in &quot;trash&quot; archive_type. <strong>Default:</strong> 30</td>
+</tr>
+<tr><td>archive_timestamp_count</td>
+<td>integer</td>
+<td>Number of versions of file, being saved in archive. Used only in &quot;timestamp&quot; archive_type. <strong>Default:</strong> 5</td>
 </tr>
 </tbody>
 </table>
