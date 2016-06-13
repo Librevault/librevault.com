@@ -1,4 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="https://librevault.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://librevault.com/" rel="alternate" type="text/html" /><updated>2016-06-10T19:22:36+00:00</updated><id>https://librevault.com/</id><title>Librevault</title><entry xml:lang="en"><title>Librevault URI Scheme</title><link href="https://librevault.com/blog/lvlt-scheme/" rel="alternate" type="text/html" title="Librevault URI Scheme" /><published>2016-06-08T19:36:05+00:00</published><updated>2016-06-08T19:36:05+00:00</updated><id>https://librevault.com/blog/lvlt-scheme</id><content type="html" xml:base="https://librevault.com/blog/lvlt-scheme/">&lt;p&gt;Librevault supports a new URI scheme, so users are able to share their Secrets with other users.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="https://librevault.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://librevault.com/" rel="alternate" type="text/html" /><updated>2016-06-13T00:33:17+00:00</updated><id>https://librevault.com/</id><title>Librevault</title><entry xml:lang="en"><title>Librevault 0.1.16</title><link href="https://librevault.com/blog/librevault-0.1.16/" rel="alternate" type="text/html" title="Librevault 0.1.16" /><published>2016-06-13T00:27:23+00:00</published><updated>2016-06-13T00:27:23+00:00</updated><id>https://librevault.com/blog/librevault-0.1.16</id><content type="html" xml:base="https://librevault.com/blog/librevault-0.1.16/">&lt;p&gt;We have released version 0.1.16!
+&lt;!-- more --&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;librevault-0116&quot;&gt;Librevault 0.1.16&lt;/h1&gt;
+
+&lt;p&gt;Changes since the previous version:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Added basic versioning support.&lt;/li&gt;
+  &lt;li&gt;Fixed Unicode problems on Windows.&lt;/li&gt;
+  &lt;li&gt;Added auto-updater controls on Settings page&lt;/li&gt;
+  &lt;li&gt;Added support of &lt;a href=&quot;https://librevault.com/blog/lvlt-scheme/&quot;&gt;Librevault links&lt;/a&gt;. The new scheme is registered by installer on Windows and by Launch Services on OS X.&lt;/li&gt;
+  &lt;li&gt;Added “Open Link” window.&lt;/li&gt;
+  &lt;li&gt;Signed binaries for Windows and OS X.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Disclaimer&lt;/strong&gt;: &lt;font color=&quot;#f00&quot;&gt;It is a very early alpha version, don&#39;t use it in the production environment. The performance may be very low, memory/CPU footprint may be high and the bugs may cause the loss of data.&lt;/font&gt;&lt;br /&gt;
+If you see any bugs, please file an issue to our &lt;a href=&quot;https://github.com/Librevault/librevault/issues&quot;&gt;issues page&lt;/a&gt; or to our &lt;a href=&quot;https://forum.librevault.com/&quot;&gt;community forum&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;download&quot;&gt;Download&lt;/h2&gt;
+&lt;p&gt;You can download Librevault on our &lt;a href=&quot;/download&quot;&gt;Download&lt;/a&gt; page.&lt;/p&gt;</content><summary>We have released version 0.1.16!</summary></entry><entry xml:lang="en"><title>Librevault URI Scheme</title><link href="https://librevault.com/blog/lvlt-scheme/" rel="alternate" type="text/html" title="Librevault URI Scheme" /><published>2016-06-08T19:36:05+00:00</published><updated>2016-06-08T19:36:05+00:00</updated><id>https://librevault.com/blog/lvlt-scheme</id><content type="html" xml:base="https://librevault.com/blog/lvlt-scheme/">&lt;p&gt;Librevault supports a new URI scheme, so users are able to share their Secrets with other users.
 &lt;!-- more --&gt;&lt;/p&gt;
 
 &lt;p&gt;The URI has the following format:&lt;/p&gt;

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>
-Librevault Blog - Librevault
+Librevault 0.1.16 - Librevault
 </title>
 
 	<!-- Favicons -->
@@ -111,154 +111,60 @@ Librevault Blog - Librevault
 		</nav>
 	</div>
 </header>
-<section class="blog-index">
+<section class="blog-post">
 	<div class="wrapper">
-		<div class="pagination pagination-top">
-	
-	<div></div>
-	
-</div>
+		<article class="opened-post">
+			<a href="/blog" class="back-link">&larr; Back to overview</a>
+			<h1 class="post-title">Librevault 0.1.16</h1>
+			<div class="date">June 13, 2016</div>
+			<div class="content">
+				<p>We have released version 0.1.16!
+<!-- more --></p>
 
-<div class="posts">
-	
-	<article class="post">
-		<h2 class="post-title"><a href="/blog/librevault-0.1.16/">Librevault 0.1.16</a></h2>
-		<time class="post-date">June 13, 2016</time>
-		<a href="/blog/librevault-0.1.16/" class="post-image">
+<h1 id="librevault-0116">Librevault 0.1.16</h1>
+
+<p>Changes since the previous version:</p>
+
+<ul>
+  <li>Added basic versioning support.</li>
+  <li>Fixed Unicode problems on Windows.</li>
+  <li>Added auto-updater controls on Settings page</li>
+  <li>Added support of <a href="https://librevault.com/blog/lvlt-scheme/">Librevault links</a>. The new scheme is registered by installer on Windows and by Launch Services on OS X.</li>
+  <li>Added “Open Link” window.</li>
+  <li>Signed binaries for Windows and OS X.</li>
+</ul>
+
+<p><strong>Disclaimer</strong>: <font color="#f00">It is a very early alpha version, don't use it in the production environment. The performance may be very low, memory/CPU footprint may be high and the bugs may cause the loss of data.</font><br />
+If you see any bugs, please file an issue to our <a href="https://github.com/Librevault/librevault/issues">issues page</a> or to our <a href="https://forum.librevault.com/">community forum</a>.</p>
+
+<h2 id="download">Download</h2>
+<p>You can download Librevault on our <a href="/download">Download</a> page.</p>
+
+			</div>
+			<div class="share">
+				Share This!
+				<script type="text/javascript" src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="//yastatic.net/share2/share.js" charset="utf-8"></script>
+<div class="ya-share2" data-lang="en" data-services="twitter,facebook,vkontakte,gplus,linkedin,reddit" data-counter=""></div>
+			</div>
 			
-		</a>
+			<section>
+				<h1>Comments</h1>
+				<div id='discourse-comments'></div>
 
-		<div class="post-entry">
-			We have released version 0.1.16!
+<script type="text/javascript">
+    DiscourseEmbed = { discourseUrl: 'https://forum.librevault.com/',
+        discourseEmbedUrl: 'https://librevault.com/blog/librevault-0.1.16/' };
 
-		</div>
-		
-		<a href="/blog/librevault-0.1.16/" class="read-more">Continue Reading…</a>
-		
-	</article>
-	
-	<article class="post">
-		<h2 class="post-title"><a href="/blog/lvlt-scheme/">Librevault URI Scheme</a></h2>
-		<time class="post-date">June  8, 2016</time>
-		<a href="/blog/lvlt-scheme/" class="post-image">
+    (function() {
+        var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+        d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+    })();
+</script>
+			</section>
 			
-		</a>
-
-		<div class="post-entry">
-			Librevault supports a new URI scheme, so users are able to share their Secrets with other users.
-
-		</div>
-		
-		<a href="/blog/lvlt-scheme/" class="read-more">Continue Reading…</a>
-		
-	</article>
-	
-	<article class="post">
-		<h2 class="post-title"><a href="/blog/librevault-config/">Librevault Configuration</a></h2>
-		<time class="post-date">May 31, 2016</time>
-		<a href="/blog/librevault-config/" class="post-image">
-			
-		</a>
-
-		<div class="post-entry">
-			Librevault configuration is written using JSON format. It is separated in two files: client.conf, containing Librevault properties and folders.conf, containing properties of folders, served by Librevault application.
-
-
-		</div>
-		
-		<a href="/blog/librevault-config/" class="read-more">Continue Reading…</a>
-		
-	</article>
-	
-	<article class="post">
-		<h2 class="post-title"><a href="/blog/librevault-0.1.15/">Librevault 0.1.15</a></h2>
-		<time class="post-date">May 30, 2016</time>
-		<a href="/blog/librevault-0.1.15/" class="post-image">
-			
-		</a>
-
-		<div class="post-entry">
-			We have a first public release, 0.1.15!
-
-		</div>
-		
-		<a href="/blog/librevault-0.1.15/" class="read-more">Continue Reading…</a>
-		
-	</article>
-	
-	<article class="post">
-		<h2 class="post-title"><a href="/blog/secret-structure/">Secret Structure</a></h2>
-		<time class="post-date">May 22, 2016</time>
-		<a href="/blog/secret-structure/" class="post-image">
-			
-		</a>
-
-		<div class="post-entry">
-			Secret is a key, used to identify sync folders, perform encryption and peer discovery.
-
-		</div>
-		
-		<a href="/blog/secret-structure/" class="read-more">Continue Reading…</a>
-		
-	</article>
-	
-	<article class="post">
-		<h2 class="post-title"><a href="/blog/features/">Librevault features overview</a></h2>
-		<time class="post-date">May 22, 2016</time>
-		<a href="/blog/features/" class="post-image">
-			
-		</a>
-
-		<div class="post-entry">
-			What is Librevault?
-
-Librevault is a data synchronization app, designed to keep files same on different computers over the network.
-
-		</div>
-		
-		<a href="/blog/features/" class="read-more">Continue Reading…</a>
-		
-	</article>
-	
-	<article class="post">
-		<h2 class="post-title"><a href="/blog/sync-tools-overview/">Synchronization tools overview</a></h2>
-		<time class="post-date">February 17, 2016</time>
-		<a href="/blog/sync-tools-overview/" class="post-image">
-			
-		</a>
-
-		<div class="post-entry">
-			There are plenty of file synchronization services available on the Internet. But they all can be divided in two groups:
-
-		</div>
-		
-		<a href="/blog/sync-tools-overview/" class="read-more">Continue Reading…</a>
-		
-	</article>
-	
-	<article class="post">
-		<h2 class="post-title"><a href="/blog/basic-threat-model/">Librevault Basic threat model</a></h2>
-		<time class="post-date">January 10, 2016</time>
-		<a href="/blog/basic-threat-model/" class="post-image">
-			
-		</a>
-
-		<div class="post-entry">
-			In this article we will describe what threats your data exposed to in classic cloud storage services and describe the way Librevault guards against them.
-
-		</div>
-		
-		<a href="/blog/basic-threat-model/" class="read-more">Continue Reading…</a>
-		
-	</article>
-	
-</div>
-
-<div class="pagination pagination-bottom">
-	
-	<div></div>
-	
-</div>
+		</article>
 	</div>
 </section>
 <footer class="footer">
