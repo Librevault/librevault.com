@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>
-Librevault Blog - Librevault
+Change in Debian repository format - Librevault
 </title>
 
 	<!-- Favicons -->
@@ -111,170 +111,57 @@ Librevault Blog - Librevault
 		</nav>
 	</div>
 </header>
-<section class="blog-index">
+<section class="blog-post">
 	<div class="wrapper">
-		<div class="pagination pagination-top">
-	
-	<div></div>
-	
+		<article class="opened-post">
+			<a href="/blog" class="back-link">&larr; Back to overview</a>
+			<h1 class="post-title">Change in Debian repository format</h1>
+			<div class="date">August 31, 2016</div>
+			<div class="content">
+				<p>Now we use a structured APT repository instead of a flat one.
+<!-- more -->
+This change enables us to provide modern versions of build tools for supported distributions, so you could build Librevault by yourself.</p>
+
+<p><strong>All Ubuntu users should execute the following command to overwrite the repository string with a new one:</strong></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>echo deb https://releases.librevault.com/debian $(lsb_release -cs) main | sudo tee /etc/apt/sources.list.d/librevault.list
+</code></pre>
 </div>
 
-<div class="posts">
-	
-	<article class="post">
-		<h2 class="post-title"><a href="/blog/debian-change/">Change in Debian repository format</a></h2>
-		<time class="post-date">August 31, 2016</time>
-		<a href="/blog/debian-change/" class="post-image">
-			
-		</a>
+<p><strong>OPTIONAL:</strong> Ubuntu 16.04 users can also install CMake 3.6, Protobuf 3.0 and Crypto++5.6.3 using <code class="highlighter-rouge">dev</code> component of this repository. This may be necessary, if you want to build Librevault by yourself.</p>
 
-		<div class="post-entry">
-			Now we use a structured APT repository instead of a flat one.
-
-		</div>
-		
-		<a href="/blog/debian-change/" class="read-more">Continue Reading…</a>
-		
-	</article>
-	
-	<article class="post">
-		<h2 class="post-title"><a href="/blog/librevault-0.1.16/">Librevault 0.1.16</a></h2>
-		<time class="post-date">June 13, 2016</time>
-		<a href="/blog/librevault-0.1.16/" class="post-image">
-			
-		</a>
-
-		<div class="post-entry">
-			We have released version 0.1.16!
-
-		</div>
-		
-		<a href="/blog/librevault-0.1.16/" class="read-more">Continue Reading…</a>
-		
-	</article>
-	
-	<article class="post">
-		<h2 class="post-title"><a href="/blog/lvlt-scheme/">Librevault URI Scheme</a></h2>
-		<time class="post-date">June  8, 2016</time>
-		<a href="/blog/lvlt-scheme/" class="post-image">
-			
-		</a>
-
-		<div class="post-entry">
-			Librevault supports a new URI scheme, so users are able to share their Secrets with other users.
-
-		</div>
-		
-		<a href="/blog/lvlt-scheme/" class="read-more">Continue Reading…</a>
-		
-	</article>
-	
-	<article class="post">
-		<h2 class="post-title"><a href="/blog/librevault-config/">Librevault Configuration</a></h2>
-		<time class="post-date">May 31, 2016</time>
-		<a href="/blog/librevault-config/" class="post-image">
-			
-		</a>
-
-		<div class="post-entry">
-			Librevault configuration is written using JSON format. It is separated in two files: client.conf, containing Librevault properties and folders.conf, containing properties of folders, served by Librevault application.
-
-
-		</div>
-		
-		<a href="/blog/librevault-config/" class="read-more">Continue Reading…</a>
-		
-	</article>
-	
-	<article class="post">
-		<h2 class="post-title"><a href="/blog/librevault-0.1.15/">Librevault 0.1.15</a></h2>
-		<time class="post-date">May 30, 2016</time>
-		<a href="/blog/librevault-0.1.15/" class="post-image">
-			
-		</a>
-
-		<div class="post-entry">
-			We have a first public release, 0.1.15!
-
-		</div>
-		
-		<a href="/blog/librevault-0.1.15/" class="read-more">Continue Reading…</a>
-		
-	</article>
-	
-	<article class="post">
-		<h2 class="post-title"><a href="/blog/secret-structure/">Secret Structure</a></h2>
-		<time class="post-date">May 22, 2016</time>
-		<a href="/blog/secret-structure/" class="post-image">
-			
-		</a>
-
-		<div class="post-entry">
-			Secret is a key, used to identify sync folders, perform encryption and peer discovery.
-
-		</div>
-		
-		<a href="/blog/secret-structure/" class="read-more">Continue Reading…</a>
-		
-	</article>
-	
-	<article class="post">
-		<h2 class="post-title"><a href="/blog/features/">Librevault features overview</a></h2>
-		<time class="post-date">May 22, 2016</time>
-		<a href="/blog/features/" class="post-image">
-			
-		</a>
-
-		<div class="post-entry">
-			What is Librevault?
-
-Librevault is a data synchronization app, designed to keep files same on different computers over the network.
-
-		</div>
-		
-		<a href="/blog/features/" class="read-more">Continue Reading…</a>
-		
-	</article>
-	
-	<article class="post">
-		<h2 class="post-title"><a href="/blog/sync-tools-overview/">Synchronization tools overview</a></h2>
-		<time class="post-date">February 17, 2016</time>
-		<a href="/blog/sync-tools-overview/" class="post-image">
-			
-		</a>
-
-		<div class="post-entry">
-			There are plenty of file synchronization services available on the Internet. But they all can be divided in two groups:
-
-		</div>
-		
-		<a href="/blog/sync-tools-overview/" class="read-more">Continue Reading…</a>
-		
-	</article>
-	
-	<article class="post">
-		<h2 class="post-title"><a href="/blog/basic-threat-model/">Librevault Basic threat model</a></h2>
-		<time class="post-date">January 10, 2016</time>
-		<a href="/blog/basic-threat-model/" class="post-image">
-			
-		</a>
-
-		<div class="post-entry">
-			In this article we will describe what threats your data exposed to in classic cloud storage services and describe the way Librevault guards against them.
-
-		</div>
-		
-		<a href="/blog/basic-threat-model/" class="read-more">Continue Reading…</a>
-		
-	</article>
-	
+<div class="highlighter-rouge"><pre class="highlight"><code>echo deb https://releases.librevault.com/debian $(lsb_release -cs) main dev | sudo tee /etc/apt/sources.list.d/librevault.list
+sudo apt update
+sudo apt install cmake libprotobuf-dev libcrypto++-dev
+</code></pre>
 </div>
 
-<div class="pagination pagination-bottom">
-	
-	<div></div>
-	
-</div>
+<p><strong>Note for Debian users:</strong> I have tried to build it for Debian Jessie, but I have not succeded, because some libraries are too old on Jessie. I will provide a universal static deb package for Debian Jessie and Ubuntu 14.04 soon.</p>
+
+			</div>
+			<div class="share">
+				Share This!
+				<script type="text/javascript" src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="//yastatic.net/share2/share.js" charset="utf-8"></script>
+<div class="ya-share2" data-lang="en" data-services="twitter,facebook,vkontakte,gplus,linkedin,reddit" data-counter=""></div>
+			</div>
+			
+			<section>
+				<h1>Comments</h1>
+				<div id='discourse-comments'></div>
+
+<script type="text/javascript">
+    DiscourseEmbed = { discourseUrl: 'https://forum.librevault.com/',
+        discourseEmbedUrl: 'https://librevault.com/blog/debian-change/' };
+
+    (function() {
+        var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+        d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+    })();
+</script>
+			</section>
+			
+		</article>
 	</div>
 </section>
 <footer class="footer">
