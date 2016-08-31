@@ -147,7 +147,7 @@ Downloads - Librevault
 			<div class="spoiler-content">
 				<div class="download-step">Type in your terminal:
 					<code>
-						echo deb https://releases.librevault.com/debian/ $(lsb_release -cs)/ | sudo tee /etc/apt/sources.list.d/librevault.list<br>
+						echo deb https://releases.librevault.com/debian $(lsb_release -cs) main | sudo tee /etc/apt/sources.list.d/librevault.list<br>
 						sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 7ECABE6D2866013E2D9DB819F6CDDCEF4B158906<br>
 						sudo apt update && sudo apt install -y librevault
 					</code>

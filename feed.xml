@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://librevault.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://librevault.com/" rel="alternate" type="text/html" /><updated>2016-08-31T08:10:20+00:00</updated><id>https://librevault.com/</id><title>Librevault</title><entry xml:lang="en"><title>Librevault 0.1.16</title><link href="https://librevault.com/blog/librevault-0.1.16/" rel="alternate" type="text/html" title="Librevault 0.1.16" /><published>2016-06-13T00:27:23+00:00</published><updated>2016-06-13T00:27:23+00:00</updated><id>https://librevault.com/blog/librevault-0.1.16</id><content type="html" xml:base="https://librevault.com/blog/librevault-0.1.16/">&lt;p&gt;We have released version 0.1.16!
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://librevault.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://librevault.com/" rel="alternate" type="text/html" /><updated>2016-08-31T08:19:37+00:00</updated><id>https://librevault.com/</id><title>Librevault</title><entry xml:lang="en"><title>Librevault 0.1.16</title><link href="https://librevault.com/blog/librevault-0.1.16/" rel="alternate" type="text/html" title="Librevault 0.1.16" /><published>2016-06-13T00:27:23+00:00</published><updated>2016-06-13T00:27:23+00:00</updated><id>https://librevault.com/blog/librevault-0.1.16</id><content type="html" xml:base="https://librevault.com/blog/librevault-0.1.16/">&lt;p&gt;We have released version 0.1.16!
 &lt;!-- more --&gt;&lt;/p&gt;
 
 &lt;p&gt;Changes since the previous version:&lt;/p&gt;
@@ -48,7 +48,7 @@ The Secret part of path component is case-sensitive.&lt;/p&gt;
 &lt;tr class=&quot;field&quot;&gt;&lt;th class=&quot;field-name&quot;&gt;Windows:&lt;/th&gt;&lt;td class=&quot;field-body&quot;&gt;&lt;p class=&quot;first&quot;&gt;&lt;code&gt;%APPDATA%\Librevault&lt;/code&gt;&lt;/p&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&quot;field&quot;&gt;&lt;th class=&quot;field-name&quot;&gt;OS X:&lt;/th&gt;&lt;td class=&quot;field-body&quot;&gt;&lt;p class=&quot;first&quot;&gt;&lt;code&gt;~/Library/Preferences/Librevault&lt;/code&gt;&lt;/p&gt;
+&lt;tr class=&quot;field&quot;&gt;&lt;th class=&quot;field-name&quot;&gt;OS X:&lt;/th&gt;&lt;td class=&quot;field-body&quot;&gt;&lt;p class=&quot;first&quot;&gt;&lt;code&gt;~/Library/Application Support/Librevault&lt;/code&gt;&lt;/p&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&quot;field&quot;&gt;&lt;th class=&quot;field-name&quot;&gt;Linux:&lt;/th&gt;&lt;td class=&quot;field-body&quot;&gt;&lt;dl class=&quot;first last docutils&quot;&gt;
